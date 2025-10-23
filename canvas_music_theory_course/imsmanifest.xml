@@ -1,0 +1,531 @@
+<?xml version="1.0" ?>
+<manifest xmlns="http://www.imsglobal.org/xsd/imsccv1p1/imscp_v1p1" xmlns:lom="http://ltsc.ieee.org/xsd/imsccv1p1/LOM/resource" xmlns:lomimscc="http://ltsc.ieee.org/xsd/imsccv1p1/LOM/manifest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" identifier="iead09ad319f9431695188b309488e2b0">
+  <metadata>
+    <schema>IMS Common Cartridge</schema>
+    <schemaversion>1.1.0</schemaversion>
+    <lom:lom>
+      <lom:general>
+        <lom:title>
+          <lom:string>Comprehensive Music Theory Course</lom:string>
+        </lom:title>
+      </lom:general>
+    </lom:lom>
+  </metadata>
+  <organizations>
+    <organization identifier="org_1" structure="rooted-hierarchy">
+      <title>Comprehensive Music Theory Course</title>
+      <item identifier="i127649dedc954b4e8dc03f7f10882351">
+        <title>Module 1: Foundations of Sound and Music</title>
+        <item identifier="i6c11e68a9f7f4801bfde9de4b85035dc" identifierref="i1f6efede381343948b74de6d8064dcea">
+          <title>Sound</title>
+        </item>
+        <item identifier="if07ee152346b44d6ba1654a0618e0658" identifierref="i46aaf6ce2d4147719c3554070ebe2818">
+          <title>Pitch</title>
+        </item>
+        <item identifier="i6f5f58d4fab9415bbeda00978017dec6" identifierref="id224fcb413cd451b876ed7b8b54da7b6">
+          <title>Duration</title>
+        </item>
+        <item identifier="iee0b34bb905f4e2a9ba58a0bec71f616" identifierref="i704ed707ad71465691f487f5946aec50">
+          <title>Volume (Dynamics)</title>
+        </item>
+        <item identifier="i191fd2b0f2c846f7b004510c8c42b874" identifierref="ia826486c0bc64f1482e41e7a642d8dc7">
+          <title>Timbre (Tone Color)</title>
+        </item>
+        <item identifier="i805ee2cb61654e029964cecaf6d5d7e5" identifierref="i7a4d8fe704aa4b92a8387f74075dc43d">
+          <title>Musical Note</title>
+        </item>
+        <item identifier="ie7645d354d634b2bba9bcde9abb2adcf" identifierref="i3dbb19005b364487bd8f15181d2ee9b8">
+          <title>Note Names (Letter Names)</title>
+        </item>
+        <item identifier="i2342f7076e3e4b89a60017757fd7281b" identifierref="i0a839aba203e489fbc0d331144254cff">
+          <title>Beat</title>
+        </item>
+      </item>
+      <item identifier="i597cc66645184db5a9a3035a1c6f7c50">
+        <title>Module 2: Musical Notation Basics</title>
+        <item identifier="id4c6617dc93a45d4b013638170d6286b" identifierref="icfb2adbe7fdc4dffb91aa033903fac06">
+          <title>Staff (Stave)</title>
+        </item>
+        <item identifier="i8df6f6e8e6804ea2997de0e6d4a58576" identifierref="ib16d3df676e340bab6d3ed2b573ff936">
+          <title>Clef</title>
+        </item>
+        <item identifier="ib283fd06e20647d9b88151df1298fc5e" identifierref="i63fb04dc62b745428884469696ea93fe">
+          <title>Treble Clef (G Clef)</title>
+        </item>
+        <item identifier="ie5c41dd36b004367930e00743ab40129" identifierref="ia63d9d354c70495db9eabdc0aa271ed2">
+          <title>Bass Clef (F Clef)</title>
+        </item>
+        <item identifier="if5b0db4129d04c27b54715e1e42c22f0" identifierref="i9e98971e00a14bff99f29c43486d50c5">
+          <title>Ledger Lines</title>
+        </item>
+      </item>
+      <item identifier="i06c47f4d4d9e495983a0189737354927">
+        <title>Module 3: Rhythm and Time</title>
+        <item identifier="i6bca5bc5ea2a426198eec9f646d2342d" identifierref="i00b68944c34c482a828020cb2880fdce">
+          <title>Rhythm</title>
+        </item>
+        <item identifier="i4cc4e2de8a504402b31b3b5f9b9595f3" identifierref="ie5fa5ba516fe4208914f74bf973e06b0">
+          <title>Tempo</title>
+        </item>
+        <item identifier="i691c2f9d4ade4c539ea483b4fb501d14" identifierref="i3eed830b79984f159d074b4595c2fbac">
+          <title>Meter</title>
+        </item>
+        <item identifier="ifafd5a034e4848b6b21ee40aa2189d83" identifierref="if1ac0ea06dca4a85a1b49220420220c3">
+          <title>Time Signature</title>
+        </item>
+        <item identifier="i11b0b7a0062145f38c4dd7e260fbebf1" identifierref="i32251dee821e465385ec2db467b95e5e">
+          <title>Measure (Bar)</title>
+        </item>
+        <item identifier="i0c2fc62926cd4159b56de87bb95d8bb7" identifierref="i181318b3999c4bc88751951b4a66a9c2">
+          <title>Note Value (Note Duration)</title>
+        </item>
+        <item identifier="ie6a74666fd9444ae9a4b83136ef47b23" identifierref="i5c2020bdf94846f6a0f3fc624ebb96db">
+          <title>Rest</title>
+        </item>
+        <item identifier="if5368759cf614fb0a707c2f9caf9b00b" identifierref="ifd0322c9c30e4568909abc244bb591fe">
+          <title>Dot (Dotted Note)</title>
+        </item>
+        <item identifier="i65a7c6bbffc34451bc4bc45591cfdbb6" identifierref="i0f2b54e649834e95ad946d2e49b91f0e">
+          <title>Tie</title>
+        </item>
+      </item>
+      <item identifier="i8c65a4e9600a42edbd97359bfa2a2bc9">
+        <title>Module 4: Accidentals and Steps</title>
+        <item identifier="if6b6090fef974c57a5edcb6a5ed9fcba" identifierref="ieedca054f11f4dd5aa3b0f210708364e">
+          <title>Accidental</title>
+        </item>
+        <item identifier="i53d9678d7afd4988bc72d45e1d3dd0fb" identifierref="i81ab97435fcd4da38f19aa5c40703d0b">
+          <title>Sharp (#)</title>
+        </item>
+        <item identifier="i3de2acd171694b1185a8e861af9790e8" identifierref="ifc3f376e62774258bf42fee625014b16">
+          <title>Flat (♭)</title>
+        </item>
+        <item identifier="ib7bacd54e4fb4c738ccd71675f43a75a" identifierref="i68e202e806ba4912b2f30b6a7f077e8d">
+          <title>Natural (♮)</title>
+        </item>
+        <item identifier="iadd1e3d2c38a4e228d5880408302d9c1" identifierref="i76babb9ff2374e98aa3714fa8a507fe9">
+          <title>Half Step (Semitone)</title>
+        </item>
+        <item identifier="i3480e49c68934b5c80db228602dbaf82" identifierref="i60c7a4462aee4e8fac40e02094db85ca">
+          <title>Whole Step (Tone)</title>
+        </item>
+      </item>
+      <item identifier="ic35f2353a57d44aab6b88d1af653f37a">
+        <title>Module 5: Intervals Foundation</title>
+        <item identifier="iff3c79e133de40b6af4e963e9d2230aa" identifierref="i2c7d9e43fd4b4b9799151b9c2e45207b">
+          <title>Interval</title>
+        </item>
+        <item identifier="i8510de5025674aeebc25310e630855d5" identifierref="icc311f8703c244e78eee4b6c6601c8fd">
+          <title>Octave</title>
+        </item>
+        <item identifier="i67bce659ccc3474b95eef2f311b71aa4" identifierref="i72734fafe0ee49d58e22d205cad89f05">
+          <title>Interval Number</title>
+        </item>
+      </item>
+      <item identifier="i5a49b782c66d43bcb87609627d5c1e42">
+        <title>Module 6: Interval Quality</title>
+        <item identifier="id0fd322d603f434b9ba030b318c4b6f3" identifierref="i1b77ad605eb24a9783f61b32b71e7c65">
+          <title>Interval Quality</title>
+        </item>
+        <item identifier="i974fbce09a8e43e0b1eefdf13cdaf3c9" identifierref="ib8e9dd32539d4630a977ce2fed00fa5e">
+          <title>Perfect Interval</title>
+        </item>
+        <item identifier="id2db176a5e894cd18ecbf5f147ebff63" identifierref="idd80b086b18049db82077edec00b4834">
+          <title>Major Interval</title>
+        </item>
+        <item identifier="i1b88927b4a7a43cfbffd6e8025eecc9c" identifierref="i8e747c3f12e94d78babc950c9ea7ffdf">
+          <title>Minor Interval</title>
+        </item>
+      </item>
+      <item identifier="iebd030becba24891983d0a4edc43a122">
+        <title>Module 7: Scales</title>
+        <item identifier="ic90388827c5c43a6ac160d96b9dd6004" identifierref="ic3bca7db4f1440cf89b97f2641bcfbfe">
+          <title>Scale</title>
+        </item>
+        <item identifier="i6dc9a8fbbb0d44babc1e038cd9822177" identifierref="iaae8701ba7114cafb30cd88590ffa3ac">
+          <title>Major Scale</title>
+        </item>
+        <item identifier="ic982c3ff880d4fa69ee1db7d1b90d794" identifierref="i64c52f2b9c1c4862a9fcaa936aa9f5cb">
+          <title>Minor Scale</title>
+        </item>
+        <item identifier="i566f47b8ad724395a41cb872062581cb" identifierref="i825f976530254e49913b77ccdf7d481f">
+          <title>Scale Degree</title>
+        </item>
+        <item identifier="ia5965edf7fac4a0291359d3fd24f3a40" identifierref="i72f3e0a1b2814e6199b6f01386ccd394">
+          <title>Tonic</title>
+        </item>
+        <item identifier="if2af9554ca0349b4acd41b2f4be0a040" identifierref="id690f575305640b6922e0259cddfcb29">
+          <title>Dominant</title>
+        </item>
+      </item>
+      <item identifier="i249b573c483e4227b05beb5ff37e4b18">
+        <title>Module 8: Keys and Key Signatures</title>
+        <item identifier="ic8e9ffa7b8c2431c85e01ff1613f7089" identifierref="i169c635f91934988862247612c9e713f">
+          <title>Key</title>
+        </item>
+        <item identifier="if286e566696343b2bd637cbd48a96507" identifierref="i911ae688f9a24fe2a686cf5bbda1f4f9">
+          <title>Key Signature</title>
+        </item>
+        <item identifier="ifd5dd2fe65ac41f6954043ebc88e1b19" identifierref="iebc91d1d005149249525ba3bdaa68d8a">
+          <title>Enharmonic Equivalents</title>
+        </item>
+        <item identifier="i39283b0b18cc48b591250fcc227c1673" identifierref="i86880dc01cf746f8b16f3827a765f28b">
+          <title>Diatonic</title>
+        </item>
+        <item identifier="id9f552a4fb0a479aa74525cf81892861" identifierref="i8264df2e685a44919d9e18bb7c7d1f00">
+          <title>Chromatic</title>
+        </item>
+      </item>
+      <item identifier="i32f6cf90c253437e8a10be5120a59a7a">
+        <title>Module 9: Chords and Triads</title>
+        <item identifier="i4c510fce3b9b4dea99188cec7771e34f" identifierref="ib83f5a8900924c5d856f2a2d82e986fb">
+          <title>Harmony</title>
+        </item>
+        <item identifier="iba211a6b059f4c5eae741796ea83c2be" identifierref="i5af737e0fcc347d3bcd79e6fe7771d00">
+          <title>Chord</title>
+        </item>
+        <item identifier="i12596642e5234f34917674f576252180" identifierref="i6a9b47976c7e4fab93ada656afd2c873">
+          <title>Triad</title>
+        </item>
+        <item identifier="ic82bd52efc744c53a2bf90187265756d" identifierref="i7b1cec66561842a7aa8e8533fcb9c13f">
+          <title>Major Triad</title>
+        </item>
+        <item identifier="i5f3ef72d49794ccd97a79d7975022697" identifierref="i521cc47b83824a19869bf1e74d97be2f">
+          <title>Minor Triad</title>
+        </item>
+      </item>
+      <item identifier="i8e0eda9427ef413ab986ad7f45e3a4c8">
+        <title>Module 10: Advanced Chords</title>
+        <item identifier="ie3809eac02564fe2a1373d32dd8ab90d" identifierref="ic296dad7884e4ceda128a33359045a98">
+          <title>Diminished Triad</title>
+        </item>
+        <item identifier="i3a4e03c0ddd84fcc97a66ed2cf68685b" identifierref="i1a8db2c706f64bcd9ce7395bf45c248a">
+          <title>Augmented Triad</title>
+        </item>
+        <item identifier="i3d4acdb244a947049c8bc1a55679fac9" identifierref="i7496c94a4af149c3be7738d71c9089ad">
+          <title>Seventh Chord</title>
+        </item>
+        <item identifier="if2ac80c54a944d92bf29689c21e97dae" identifierref="ic04e99b03b7c4558b8c0502ad858cc33">
+          <title>Chord Inversion</title>
+        </item>
+      </item>
+      <item identifier="ib7983a2c807840b3bab81e583451556a">
+        <title>Module 11: Harmony and Progressions</title>
+        <item identifier="ifb88fa1a5548486eb258ab55b5f5eb36" identifierref="i44a52959f2494e16ae4c445d614bcf7a">
+          <title>Consonance</title>
+        </item>
+        <item identifier="i7874ccef7ad944dd8d9f70ced89ee122" identifierref="i5b97060e6c4b4b469c9a8e137cd17b97">
+          <title>Dissonance</title>
+        </item>
+        <item identifier="i200f0abb9f5a4554ae4d8ac4b71fe231" identifierref="ifb565a946c5a4ea9aab586323762d0a1">
+          <title>Chord Progression</title>
+        </item>
+        <item identifier="i8593b83b757a49658527c71c47ff933d" identifierref="i71304af72d7842cda843fcf670ce3486">
+          <title>Cadence</title>
+        </item>
+      </item>
+      <item identifier="i5ef151af97e5473ca0959274fff567a4">
+        <title>Module 12: Melody and Structure</title>
+        <item identifier="ib77f3869aa2647ff9d1743f58bd76ee8" identifierref="i296dcf217e274f73ba1aaf04fcf10600">
+          <title>Melody</title>
+        </item>
+        <item identifier="i99402c1a136148d4b78958db8ecf1f16" identifierref="idd4f5cd1c7a64567a2e8995e351b694a">
+          <title>Phrase</title>
+        </item>
+        <item identifier="iaa7991dad5b94a2b97ceeda77ee9ee7a" identifierref="i998ad11f0902424aa2155cf515a8b911">
+          <title>Motif (Motive)</title>
+        </item>
+      </item>
+      <item identifier="i3abe5a5608e447938179a1cc7634970d">
+        <title>Module 13: Musical Expression</title>
+        <item identifier="ie2735507212b46268efe11051d9d4aed" identifierref="ifc37d567bfd94dc8a3367d450db43017">
+          <title>Dynamics (Musical Dynamics)</title>
+        </item>
+        <item identifier="ic8aa4548f2e94d2ea57b3d47d5b1d890" identifierref="i2bf45783e93442808c486bb85b4898b9">
+          <title>Articulation</title>
+        </item>
+      </item>
+      <item identifier="i061014b29ba74200825b55daefe1be20">
+        <title>Module 14: Form and Texture</title>
+        <item identifier="icd859633c06e42e4baa7271efbadac7b" identifierref="id062983602ad4664a4c3b0b16faa20fc">
+          <title>Musical Form</title>
+        </item>
+        <item identifier="i89e1181e91c44f11b0b3d48cd3071e33" identifierref="i4e4689355d254d88b030b9daedcabde9">
+          <title>Musical Texture</title>
+        </item>
+      </item>
+      <item identifier="id482bc8a040d4bf88ebebc1f5022eac3">
+        <title>Module 15: Advanced Theory</title>
+        <item identifier="iba2a94ee44834360b72225d461e0eefe" identifierref="i3ab829263d4f48388e18d0d28ff7c88b">
+          <title>Transposition</title>
+        </item>
+        <item identifier="i804322d2f1014169ac9e08a405744313" identifierref="i23f7c6fdeed14b78ab0bdb2ac8af239d">
+          <title>Modulation</title>
+        </item>
+        <item identifier="i4abc533ea05b4223a73a850a3c79ec18" identifierref="iac00c903ca86413f90d33da1c95533ff">
+          <title>Voice Leading</title>
+        </item>
+        <item identifier="icbdfba7bf3eb49c982da60e7ad7113b6" identifierref="i978a9ca98e514636a5e4ce90358cb312">
+          <title>Roman Numeral Analysis</title>
+        </item>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="i1f6efede381343948b74de6d8064dcea" type="webcontent">
+      <file href="wiki_content/sound.html"/>
+    </resource>
+    <resource identifier="i46aaf6ce2d4147719c3554070ebe2818" type="webcontent">
+      <file href="wiki_content/pitch.html"/>
+    </resource>
+    <resource identifier="id224fcb413cd451b876ed7b8b54da7b6" type="webcontent">
+      <file href="wiki_content/duration.html"/>
+    </resource>
+    <resource identifier="i704ed707ad71465691f487f5946aec50" type="webcontent">
+      <file href="wiki_content/volume.html"/>
+    </resource>
+    <resource identifier="ia826486c0bc64f1482e41e7a642d8dc7" type="webcontent">
+      <file href="wiki_content/timbre.html"/>
+    </resource>
+    <resource identifier="i7a4d8fe704aa4b92a8387f74075dc43d" type="webcontent">
+      <file href="wiki_content/note.html"/>
+    </resource>
+    <resource identifier="i3dbb19005b364487bd8f15181d2ee9b8" type="webcontent">
+      <file href="wiki_content/note-name.html"/>
+    </resource>
+    <resource identifier="i0a839aba203e489fbc0d331144254cff" type="webcontent">
+      <file href="wiki_content/beat.html"/>
+    </resource>
+    <resource identifier="icfb2adbe7fdc4dffb91aa033903fac06" type="webcontent">
+      <file href="wiki_content/staff.html"/>
+    </resource>
+    <resource identifier="ib16d3df676e340bab6d3ed2b573ff936" type="webcontent">
+      <file href="wiki_content/clef.html"/>
+    </resource>
+    <resource identifier="i63fb04dc62b745428884469696ea93fe" type="webcontent">
+      <file href="wiki_content/treble-clef.html"/>
+    </resource>
+    <resource identifier="ia63d9d354c70495db9eabdc0aa271ed2" type="webcontent">
+      <file href="wiki_content/bass-clef.html"/>
+    </resource>
+    <resource identifier="i9e98971e00a14bff99f29c43486d50c5" type="webcontent">
+      <file href="wiki_content/ledger-lines.html"/>
+    </resource>
+    <resource identifier="i00b68944c34c482a828020cb2880fdce" type="webcontent">
+      <file href="wiki_content/rhythm.html"/>
+    </resource>
+    <resource identifier="ie5fa5ba516fe4208914f74bf973e06b0" type="webcontent">
+      <file href="wiki_content/tempo.html"/>
+    </resource>
+    <resource identifier="i3eed830b79984f159d074b4595c2fbac" type="webcontent">
+      <file href="wiki_content/meter.html"/>
+    </resource>
+    <resource identifier="if1ac0ea06dca4a85a1b49220420220c3" type="webcontent">
+      <file href="wiki_content/time-signature.html"/>
+    </resource>
+    <resource identifier="i32251dee821e465385ec2db467b95e5e" type="webcontent">
+      <file href="wiki_content/measure.html"/>
+    </resource>
+    <resource identifier="i181318b3999c4bc88751951b4a66a9c2" type="webcontent">
+      <file href="wiki_content/note-value.html"/>
+    </resource>
+    <resource identifier="i5c2020bdf94846f6a0f3fc624ebb96db" type="webcontent">
+      <file href="wiki_content/rest.html"/>
+    </resource>
+    <resource identifier="ifd0322c9c30e4568909abc244bb591fe" type="webcontent">
+      <file href="wiki_content/dot.html"/>
+    </resource>
+    <resource identifier="i0f2b54e649834e95ad946d2e49b91f0e" type="webcontent">
+      <file href="wiki_content/tie.html"/>
+    </resource>
+    <resource identifier="ieedca054f11f4dd5aa3b0f210708364e" type="webcontent">
+      <file href="wiki_content/accidental.html"/>
+    </resource>
+    <resource identifier="i81ab97435fcd4da38f19aa5c40703d0b" type="webcontent">
+      <file href="wiki_content/sharp.html"/>
+    </resource>
+    <resource identifier="ifc3f376e62774258bf42fee625014b16" type="webcontent">
+      <file href="wiki_content/flat.html"/>
+    </resource>
+    <resource identifier="i68e202e806ba4912b2f30b6a7f077e8d" type="webcontent">
+      <file href="wiki_content/natural.html"/>
+    </resource>
+    <resource identifier="i76babb9ff2374e98aa3714fa8a507fe9" type="webcontent">
+      <file href="wiki_content/half-step.html"/>
+    </resource>
+    <resource identifier="i60c7a4462aee4e8fac40e02094db85ca" type="webcontent">
+      <file href="wiki_content/whole-step.html"/>
+    </resource>
+    <resource identifier="i2c7d9e43fd4b4b9799151b9c2e45207b" type="webcontent">
+      <file href="wiki_content/interval.html"/>
+    </resource>
+    <resource identifier="icc311f8703c244e78eee4b6c6601c8fd" type="webcontent">
+      <file href="wiki_content/octave.html"/>
+    </resource>
+    <resource identifier="i72734fafe0ee49d58e22d205cad89f05" type="webcontent">
+      <file href="wiki_content/interval-number.html"/>
+    </resource>
+    <resource identifier="i1b77ad605eb24a9783f61b32b71e7c65" type="webcontent">
+      <file href="wiki_content/interval-quality.html"/>
+    </resource>
+    <resource identifier="ib8e9dd32539d4630a977ce2fed00fa5e" type="webcontent">
+      <file href="wiki_content/perfect-interval.html"/>
+    </resource>
+    <resource identifier="idd80b086b18049db82077edec00b4834" type="webcontent">
+      <file href="wiki_content/major-interval.html"/>
+    </resource>
+    <resource identifier="i8e747c3f12e94d78babc950c9ea7ffdf" type="webcontent">
+      <file href="wiki_content/minor-interval.html"/>
+    </resource>
+    <resource identifier="ic3bca7db4f1440cf89b97f2641bcfbfe" type="webcontent">
+      <file href="wiki_content/scale.html"/>
+    </resource>
+    <resource identifier="iaae8701ba7114cafb30cd88590ffa3ac" type="webcontent">
+      <file href="wiki_content/major-scale.html"/>
+    </resource>
+    <resource identifier="i64c52f2b9c1c4862a9fcaa936aa9f5cb" type="webcontent">
+      <file href="wiki_content/minor-scale.html"/>
+    </resource>
+    <resource identifier="i825f976530254e49913b77ccdf7d481f" type="webcontent">
+      <file href="wiki_content/scale-degree.html"/>
+    </resource>
+    <resource identifier="i72f3e0a1b2814e6199b6f01386ccd394" type="webcontent">
+      <file href="wiki_content/tonic.html"/>
+    </resource>
+    <resource identifier="id690f575305640b6922e0259cddfcb29" type="webcontent">
+      <file href="wiki_content/dominant.html"/>
+    </resource>
+    <resource identifier="i169c635f91934988862247612c9e713f" type="webcontent">
+      <file href="wiki_content/key.html"/>
+    </resource>
+    <resource identifier="i911ae688f9a24fe2a686cf5bbda1f4f9" type="webcontent">
+      <file href="wiki_content/key-signature.html"/>
+    </resource>
+    <resource identifier="iebc91d1d005149249525ba3bdaa68d8a" type="webcontent">
+      <file href="wiki_content/enharmonic.html"/>
+    </resource>
+    <resource identifier="i86880dc01cf746f8b16f3827a765f28b" type="webcontent">
+      <file href="wiki_content/diatonic.html"/>
+    </resource>
+    <resource identifier="i8264df2e685a44919d9e18bb7c7d1f00" type="webcontent">
+      <file href="wiki_content/chromatic.html"/>
+    </resource>
+    <resource identifier="ib83f5a8900924c5d856f2a2d82e986fb" type="webcontent">
+      <file href="wiki_content/harmony.html"/>
+    </resource>
+    <resource identifier="i5af737e0fcc347d3bcd79e6fe7771d00" type="webcontent">
+      <file href="wiki_content/chord.html"/>
+    </resource>
+    <resource identifier="i6a9b47976c7e4fab93ada656afd2c873" type="webcontent">
+      <file href="wiki_content/triad.html"/>
+    </resource>
+    <resource identifier="i7b1cec66561842a7aa8e8533fcb9c13f" type="webcontent">
+      <file href="wiki_content/major-triad.html"/>
+    </resource>
+    <resource identifier="i521cc47b83824a19869bf1e74d97be2f" type="webcontent">
+      <file href="wiki_content/minor-triad.html"/>
+    </resource>
+    <resource identifier="ic296dad7884e4ceda128a33359045a98" type="webcontent">
+      <file href="wiki_content/diminished-triad.html"/>
+    </resource>
+    <resource identifier="i1a8db2c706f64bcd9ce7395bf45c248a" type="webcontent">
+      <file href="wiki_content/augmented-triad.html"/>
+    </resource>
+    <resource identifier="i7496c94a4af149c3be7738d71c9089ad" type="webcontent">
+      <file href="wiki_content/seventh-chord.html"/>
+    </resource>
+    <resource identifier="ic04e99b03b7c4558b8c0502ad858cc33" type="webcontent">
+      <file href="wiki_content/chord-inversion.html"/>
+    </resource>
+    <resource identifier="i44a52959f2494e16ae4c445d614bcf7a" type="webcontent">
+      <file href="wiki_content/consonance.html"/>
+    </resource>
+    <resource identifier="i5b97060e6c4b4b469c9a8e137cd17b97" type="webcontent">
+      <file href="wiki_content/dissonance.html"/>
+    </resource>
+    <resource identifier="ifb565a946c5a4ea9aab586323762d0a1" type="webcontent">
+      <file href="wiki_content/chord-progression.html"/>
+    </resource>
+    <resource identifier="i71304af72d7842cda843fcf670ce3486" type="webcontent">
+      <file href="wiki_content/cadence.html"/>
+    </resource>
+    <resource identifier="i296dcf217e274f73ba1aaf04fcf10600" type="webcontent">
+      <file href="wiki_content/melody.html"/>
+    </resource>
+    <resource identifier="idd4f5cd1c7a64567a2e8995e351b694a" type="webcontent">
+      <file href="wiki_content/phrase.html"/>
+    </resource>
+    <resource identifier="i998ad11f0902424aa2155cf515a8b911" type="webcontent">
+      <file href="wiki_content/motif.html"/>
+    </resource>
+    <resource identifier="ifc37d567bfd94dc8a3367d450db43017" type="webcontent">
+      <file href="wiki_content/dynamics.html"/>
+    </resource>
+    <resource identifier="i2bf45783e93442808c486bb85b4898b9" type="webcontent">
+      <file href="wiki_content/articulation.html"/>
+    </resource>
+    <resource identifier="id062983602ad4664a4c3b0b16faa20fc" type="webcontent">
+      <file href="wiki_content/form.html"/>
+    </resource>
+    <resource identifier="i4e4689355d254d88b030b9daedcabde9" type="webcontent">
+      <file href="wiki_content/texture.html"/>
+    </resource>
+    <resource identifier="i3ab829263d4f48388e18d0d28ff7c88b" type="webcontent">
+      <file href="wiki_content/transposition.html"/>
+    </resource>
+    <resource identifier="i23f7c6fdeed14b78ab0bdb2ac8af239d" type="webcontent">
+      <file href="wiki_content/modulation.html"/>
+    </resource>
+    <resource identifier="iac00c903ca86413f90d33da1c95533ff" type="webcontent">
+      <file href="wiki_content/voice-leading.html"/>
+    </resource>
+    <resource identifier="i978a9ca98e514636a5e4ce90358cb312" type="webcontent">
+      <file href="wiki_content/roman-numeral-analysis.html"/>
+    </resource>
+    <resource identifier="i14060e8bf1c446048263c4d0f62adc60" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="assessment_questions/quiz_module_1.xml"/>
+    </resource>
+    <resource identifier="iadf344e86a8e49a2b37f129d33675f01" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="assessment_questions/quiz_module_2.xml"/>
+    </resource>
+    <resource identifier="if13acc43649f4af9a4439dbb94d0a650" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="assessment_questions/quiz_module_3.xml"/>
+    </resource>
+    <resource identifier="i06e133420a1e4c2e95eef804d950da03" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="assessment_questions/quiz_module_4.xml"/>
+    </resource>
+    <resource identifier="i8d33eaf8f0ed4b93962e99fa83b20a3e" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="assessment_questions/quiz_module_5.xml"/>
+    </resource>
+    <resource identifier="i4fd15048077d4de3b29d05115bd9fbbb" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="assessment_questions/quiz_module_6.xml"/>
+    </resource>
+    <resource identifier="id4325e096d364373827d8d8dbdf9c506" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="assessment_questions/quiz_module_7.xml"/>
+    </resource>
+    <resource identifier="i4fd01a53d3f04998a16224c4d9a4eaa3" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="assessment_questions/quiz_module_8.xml"/>
+    </resource>
+    <resource identifier="iff2e3022a44d4da4ba213d7768dee8eb" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="assessment_questions/quiz_module_9.xml"/>
+    </resource>
+    <resource identifier="ibfac98cde63047beba1629ca0b77795e" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="assessment_questions/quiz_module_10.xml"/>
+    </resource>
+    <resource identifier="i27d460cd382d4dfbacf4f20089fc8fd1" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="assessment_questions/quiz_module_11.xml"/>
+    </resource>
+    <resource identifier="i7b64c93ef03247e7bb6f62a3da171193" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="assessment_questions/quiz_module_12.xml"/>
+    </resource>
+    <resource identifier="i5b254149294f4263bb2e12b07f6a968e" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="assessment_questions/quiz_module_13.xml"/>
+    </resource>
+    <resource identifier="icc7ca848da2a4f5d8cd6d2ef3b522e56" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="assessment_questions/quiz_module_14.xml"/>
+    </resource>
+    <resource identifier="i9c76d9abdc9c4a218cb680d7f809456c" type="imsqti_xmlv1p2/imscc_xmlv1p1/assessment">
+      <file href="assessment_questions/quiz_module_15.xml"/>
+    </resource>
+  </resources>
+</manifest>

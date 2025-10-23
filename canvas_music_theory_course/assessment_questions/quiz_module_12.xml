@@ -1,0 +1,120 @@
+<?xml version="1.0" ?>
+<questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2">
+  <item ident="ic37c3e4ac385453ca22ee811a73139ae" title="Understanding Melody">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Which of the following best describes Melody?</mattext>
+      </material>
+      <response_lid ident="response1" rcardinality="Single">
+        <render_choice>
+          <response_label ident="correct">
+            <material>
+              <mattext>A sequence of pitches perceived as a single, coherent musical line; the horizontal aspect of music</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor1">
+            <material>
+              <mattext>A musical term for tempo variations</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor2">
+            <material>
+              <mattext>A type of musical instrument</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor3">
+            <material>
+              <mattext>A performance technique</mattext>
+            </material>
+          </response_label>
+        </render_choice>
+      </response_lid>
+    </presentation>
+  </item>
+  <item ident="i2729a01a2b6045eab1de0731274ceac4" title="Application: Melody">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Explain in your own words: Recognize melody as a succession of pitches over time</mattext>
+      </material>
+      <response_str ident="response1" rcardinality="Single"/>
+    </presentation>
+  </item>
+  <item ident="i27fef11c0aab4c0aa8da1d5e01fb41c4" title="Understanding Phrase">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Which of the following best describes Phrase?</mattext>
+      </material>
+      <response_lid ident="response1" rcardinality="Single">
+        <render_choice>
+          <response_label ident="correct">
+            <material>
+              <mattext>A musical unit, typically 2-8 measures, that expresses a complete musical thought</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor1">
+            <material>
+              <mattext>A musical term for tempo variations</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor2">
+            <material>
+              <mattext>A type of musical instrument</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor3">
+            <material>
+              <mattext>A performance technique</mattext>
+            </material>
+          </response_label>
+        </render_choice>
+      </response_lid>
+    </presentation>
+  </item>
+  <item ident="i8646e1807b3b4665b8b15796afe2372c" title="Application: Phrase">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Explain in your own words: Identify phrases in music</mattext>
+      </material>
+      <response_str ident="response1" rcardinality="Single"/>
+    </presentation>
+  </item>
+  <item ident="i58de1208203b4657abb38b031edab815" title="Understanding Motif (Motive)">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Which of the following best describes Motif (Motive)?</mattext>
+      </material>
+      <response_lid ident="response1" rcardinality="Single">
+        <render_choice>
+          <response_label ident="correct">
+            <material>
+              <mattext>A short musical idea that recurs and develops throughout a piece</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor1">
+            <material>
+              <mattext>A musical term for tempo variations</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor2">
+            <material>
+              <mattext>A type of musical instrument</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor3">
+            <material>
+              <mattext>A performance technique</mattext>
+            </material>
+          </response_label>
+        </render_choice>
+      </response_lid>
+    </presentation>
+  </item>
+  <item ident="if0bec21ed05249e28c1a89507a3b762b" title="Application: Motif (Motive)">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Explain in your own words: Identify motifs in music</mattext>
+      </material>
+      <response_str ident="response1" rcardinality="Single"/>
+    </presentation>
+  </item>
+</questestinterop>

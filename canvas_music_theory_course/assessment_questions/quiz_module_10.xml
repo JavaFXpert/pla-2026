@@ -1,0 +1,159 @@
+<?xml version="1.0" ?>
+<questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2">
+  <item ident="if27c1f8475aa451593755c4119b0b240" title="Understanding Diminished Triad">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Which of the following best describes Diminished Triad?</mattext>
+      </material>
+      <response_lid ident="response1" rcardinality="Single">
+        <render_choice>
+          <response_label ident="correct">
+            <material>
+              <mattext>A triad with a minor third and diminished fifth (6 half steps) above the root</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor1">
+            <material>
+              <mattext>A musical term for tempo variations</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor2">
+            <material>
+              <mattext>A type of musical instrument</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor3">
+            <material>
+              <mattext>A performance technique</mattext>
+            </material>
+          </response_label>
+        </render_choice>
+      </response_lid>
+    </presentation>
+  </item>
+  <item ident="i089a1e5fd4174644940843095a342e36" title="Application: Diminished Triad">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Explain in your own words: Build diminished triads from any root</mattext>
+      </material>
+      <response_str ident="response1" rcardinality="Single"/>
+    </presentation>
+  </item>
+  <item ident="i3dc2f92d38424dbd843d964185f7a972" title="Understanding Augmented Triad">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Which of the following best describes Augmented Triad?</mattext>
+      </material>
+      <response_lid ident="response1" rcardinality="Single">
+        <render_choice>
+          <response_label ident="correct">
+            <material>
+              <mattext>A triad with a major third and augmented fifth (8 half steps) above the root</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor1">
+            <material>
+              <mattext>A musical term for tempo variations</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor2">
+            <material>
+              <mattext>A type of musical instrument</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor3">
+            <material>
+              <mattext>A performance technique</mattext>
+            </material>
+          </response_label>
+        </render_choice>
+      </response_lid>
+    </presentation>
+  </item>
+  <item ident="ia0fe6d2ca7f24cc8b9de10ce48a46520" title="Application: Augmented Triad">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Explain in your own words: Build augmented triads from any root</mattext>
+      </material>
+      <response_str ident="response1" rcardinality="Single"/>
+    </presentation>
+  </item>
+  <item ident="i0f90fc240f6e40da9138630d194e7ee4" title="Understanding Seventh Chord">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Which of the following best describes Seventh Chord?</mattext>
+      </material>
+      <response_lid ident="response1" rcardinality="Single">
+        <render_choice>
+          <response_label ident="correct">
+            <material>
+              <mattext>A four-note chord built by adding a seventh above the root to a triad</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor1">
+            <material>
+              <mattext>A musical term for tempo variations</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor2">
+            <material>
+              <mattext>A type of musical instrument</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor3">
+            <material>
+              <mattext>A performance technique</mattext>
+            </material>
+          </response_label>
+        </render_choice>
+      </response_lid>
+    </presentation>
+  </item>
+  <item ident="ic8b213d3a6a646d7aa8ff27140b4f8e9" title="Application: Seventh Chord">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Explain in your own words: Identify seventh chords by their structure</mattext>
+      </material>
+      <response_str ident="response1" rcardinality="Single"/>
+    </presentation>
+  </item>
+  <item ident="ifa410d13a81c4ad9b29a1aadcfc4ff9d" title="Understanding Chord Inversion">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Which of the following best describes Chord Inversion?</mattext>
+      </material>
+      <response_lid ident="response1" rcardinality="Single">
+        <render_choice>
+          <response_label ident="correct">
+            <material>
+              <mattext>A rearrangement of chord tones so that a note other than the root is in the bass</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor1">
+            <material>
+              <mattext>A musical term for tempo variations</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor2">
+            <material>
+              <mattext>A type of musical instrument</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor3">
+            <material>
+              <mattext>A performance technique</mattext>
+            </material>
+          </response_label>
+        </render_choice>
+      </response_lid>
+    </presentation>
+  </item>
+  <item ident="idc93debac78a4f3f8dfc39bd6b038517" title="Application: Chord Inversion">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Explain in your own words: Identify chord inversions</mattext>
+      </material>
+      <response_str ident="response1" rcardinality="Single"/>
+    </presentation>
+  </item>
+</questestinterop>

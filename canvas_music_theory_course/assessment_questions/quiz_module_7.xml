@@ -1,0 +1,237 @@
+<?xml version="1.0" ?>
+<questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2">
+  <item ident="i9448e43d992e4a89bf23e597dcfbc5b0" title="Understanding Scale">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Which of the following best describes Scale?</mattext>
+      </material>
+      <response_lid ident="response1" rcardinality="Single">
+        <render_choice>
+          <response_label ident="correct">
+            <material>
+              <mattext>An ordered collection of pitches, typically spanning an octave, following a specific pattern of intervals</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor1">
+            <material>
+              <mattext>A musical term for tempo variations</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor2">
+            <material>
+              <mattext>A type of musical instrument</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor3">
+            <material>
+              <mattext>A performance technique</mattext>
+            </material>
+          </response_label>
+        </render_choice>
+      </response_lid>
+    </presentation>
+  </item>
+  <item ident="iab4e9fd00389468389e51e450b7efda5" title="Application: Scale">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Explain in your own words: Understand scales as organized collections of pitches</mattext>
+      </material>
+      <response_str ident="response1" rcardinality="Single"/>
+    </presentation>
+  </item>
+  <item ident="i376747d870e642bfbce2fee323374f5e" title="Understanding Major Scale">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Which of the following best describes Major Scale?</mattext>
+      </material>
+      <response_lid ident="response1" rcardinality="Single">
+        <render_choice>
+          <response_label ident="correct">
+            <material>
+              <mattext>A seven-note scale with the interval pattern: W-W-H-W-W-W-H (W=whole step, H=half step)</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor1">
+            <material>
+              <mattext>A musical term for tempo variations</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor2">
+            <material>
+              <mattext>A type of musical instrument</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor3">
+            <material>
+              <mattext>A performance technique</mattext>
+            </material>
+          </response_label>
+        </render_choice>
+      </response_lid>
+    </presentation>
+  </item>
+  <item ident="i9b06bc8206044b36be8803a1ae7545a7" title="Application: Major Scale">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Explain in your own words: Build major scales from any starting note</mattext>
+      </material>
+      <response_str ident="response1" rcardinality="Single"/>
+    </presentation>
+  </item>
+  <item ident="i4170cd51eb014c97b6951fb17d1cc555" title="Understanding Minor Scale">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Which of the following best describes Minor Scale?</mattext>
+      </material>
+      <response_lid ident="response1" rcardinality="Single">
+        <render_choice>
+          <response_label ident="correct">
+            <material>
+              <mattext>A seven-note scale with a darker, more somber character than major; exists in natural, harmonic, and melodic forms</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor1">
+            <material>
+              <mattext>A musical term for tempo variations</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor2">
+            <material>
+              <mattext>A type of musical instrument</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor3">
+            <material>
+              <mattext>A performance technique</mattext>
+            </material>
+          </response_label>
+        </render_choice>
+      </response_lid>
+    </presentation>
+  </item>
+  <item ident="ice95d8faf8d44befb1332756294ba4f3" title="Application: Minor Scale">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Explain in your own words: Build natural minor scales using W-H-W-W-H-W-W pattern</mattext>
+      </material>
+      <response_str ident="response1" rcardinality="Single"/>
+    </presentation>
+  </item>
+  <item ident="i260a2ead222e4580a042962d942a862b" title="Understanding Scale Degree">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Which of the following best describes Scale Degree?</mattext>
+      </material>
+      <response_lid ident="response1" rcardinality="Single">
+        <render_choice>
+          <response_label ident="correct">
+            <material>
+              <mattext>The position of a note within a scale, numbered 1-7 (or 1-8 including the octave)</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor1">
+            <material>
+              <mattext>A musical term for tempo variations</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor2">
+            <material>
+              <mattext>A type of musical instrument</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor3">
+            <material>
+              <mattext>A performance technique</mattext>
+            </material>
+          </response_label>
+        </render_choice>
+      </response_lid>
+    </presentation>
+  </item>
+  <item ident="i9f8fdc6aaf9f470888120fde06c52b48" title="Application: Scale Degree">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Explain in your own words: Identify scale degrees by number</mattext>
+      </material>
+      <response_str ident="response1" rcardinality="Single"/>
+    </presentation>
+  </item>
+  <item ident="i45a5005d9d844f498051c6c2dcbdc90e" title="Understanding Tonic">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Which of the following best describes Tonic?</mattext>
+      </material>
+      <response_lid ident="response1" rcardinality="Single">
+        <render_choice>
+          <response_label ident="correct">
+            <material>
+              <mattext>The first scale degree and home note of a key; provides the strongest sense of stability and resolution</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor1">
+            <material>
+              <mattext>A musical term for tempo variations</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor2">
+            <material>
+              <mattext>A type of musical instrument</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor3">
+            <material>
+              <mattext>A performance technique</mattext>
+            </material>
+          </response_label>
+        </render_choice>
+      </response_lid>
+    </presentation>
+  </item>
+  <item ident="iace380039b3946b49bd0a49b514d7d71" title="Application: Tonic">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Explain in your own words: Identify the tonic of a key</mattext>
+      </material>
+      <response_str ident="response1" rcardinality="Single"/>
+    </presentation>
+  </item>
+  <item ident="iac69a37e435e48c2b15b9a2a5fc2fbe8" title="Understanding Dominant">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Which of the following best describes Dominant?</mattext>
+      </material>
+      <response_lid ident="response1" rcardinality="Single">
+        <render_choice>
+          <response_label ident="correct">
+            <material>
+              <mattext>The fifth scale degree; creates tension that resolves to the tonic</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor1">
+            <material>
+              <mattext>A musical term for tempo variations</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor2">
+            <material>
+              <mattext>A type of musical instrument</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor3">
+            <material>
+              <mattext>A performance technique</mattext>
+            </material>
+          </response_label>
+        </render_choice>
+      </response_lid>
+    </presentation>
+  </item>
+  <item ident="i10112513d2a140a5b16d673db534af75" title="Application: Dominant">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Explain in your own words: Identify the dominant in any key</mattext>
+      </material>
+      <response_str ident="response1" rcardinality="Single"/>
+    </presentation>
+  </item>
+</questestinterop>
