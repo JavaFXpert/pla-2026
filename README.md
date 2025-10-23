@@ -1,2 +1,2 @@
 # pla-2026
-Personal Learning Assistant re-imagined for 2026 and beyond
+Re-imagining the personal learning assistant for 2026 and beyond.
