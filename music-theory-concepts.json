@@ -1,0 +1,1775 @@
+{
+  "domain": "music-theory",
+  "version": "1.0.0",
+  "description": "A comprehensive graph of atomic-granularity concepts for understanding music theory",
+  "concepts": [
+    {
+      "id": "sound",
+      "name": "Sound",
+      "description": "Vibrations traveling through air or another medium that can be heard",
+      "atomicity": "atomic",
+      "prerequisites": [],
+      "related_concepts": ["pitch", "volume", "timbre"],
+      "difficulty": 1,
+      "learning_objectives": [
+        "Understand that sound is created by vibrations",
+        "Recognize that different sounds have different qualities"
+      ],
+      "examples": [
+        "A guitar string vibrating creates sound",
+        "Clapping hands creates a sound wave"
+      ],
+      "tags": ["fundamental", "physics", "acoustics"]
+    },
+    {
+      "id": "pitch",
+      "name": "Pitch",
+      "description": "The perceived highness or lowness of a sound, determined by frequency",
+      "atomicity": "atomic",
+      "prerequisites": ["sound"],
+      "related_concepts": ["note", "frequency", "interval"],
+      "difficulty": 1,
+      "learning_objectives": [
+        "Distinguish between high and low pitches",
+        "Understand that pitch is related to frequency"
+      ],
+      "examples": [
+        "A whistle has a high pitch",
+        "A bass drum has a low pitch",
+        "The note A440 vibrates at 440 Hz"
+      ],
+      "tags": ["fundamental", "acoustics", "perception"]
+    },
+    {
+      "id": "duration",
+      "name": "Duration",
+      "description": "The length of time a sound is sustained",
+      "atomicity": "atomic",
+      "prerequisites": ["sound"],
+      "related_concepts": ["rhythm", "note-value", "tempo"],
+      "difficulty": 1,
+      "learning_objectives": [
+        "Understand that sounds can be short or long",
+        "Recognize duration as a fundamental property of musical sounds"
+      ],
+      "examples": [
+        "A short tap vs. a sustained tone",
+        "A quarter note vs. a whole note"
+      ],
+      "tags": ["fundamental", "rhythm", "time"]
+    },
+    {
+      "id": "volume",
+      "name": "Volume (Dynamics)",
+      "description": "The loudness or softness of a sound",
+      "atomicity": "atomic",
+      "prerequisites": ["sound"],
+      "related_concepts": ["dynamics", "amplitude"],
+      "difficulty": 1,
+      "learning_objectives": [
+        "Distinguish between loud and soft sounds",
+        "Understand volume as a musical parameter"
+      ],
+      "examples": [
+        "Forte (f) means loud",
+        "Piano (p) means soft"
+      ],
+      "tags": ["fundamental", "dynamics", "expression"]
+    },
+    {
+      "id": "timbre",
+      "name": "Timbre (Tone Color)",
+      "description": "The quality or color of a sound that distinguishes different instruments or voices",
+      "atomicity": "atomic",
+      "prerequisites": ["sound"],
+      "related_concepts": ["instrument", "harmonics"],
+      "difficulty": 2,
+      "learning_objectives": [
+        "Identify different instruments by their sound quality",
+        "Understand that timbre is what makes a piano sound different from a violin"
+      ],
+      "examples": [
+        "A trumpet has a bright, brassy timbre",
+        "A flute has a pure, airy timbre"
+      ],
+      "tags": ["fundamental", "acoustics", "perception"]
+    },
+    {
+      "id": "note",
+      "name": "Musical Note",
+      "description": "A symbol representing a single sound with specific pitch and duration",
+      "atomicity": "atomic",
+      "prerequisites": ["pitch", "duration"],
+      "related_concepts": ["note-name", "note-value", "staff"],
+      "difficulty": 1,
+      "learning_objectives": [
+        "Understand that a note combines pitch and duration",
+        "Recognize notes as the basic building blocks of music"
+      ],
+      "examples": [
+        "A quarter note C",
+        "A half note G"
+      ],
+      "tags": ["fundamental", "notation", "building-block"]
+    },
+    {
+      "id": "note-name",
+      "name": "Note Names (Letter Names)",
+      "description": "The letters A through G used to identify specific pitches",
+      "atomicity": "atomic",
+      "prerequisites": ["note", "pitch"],
+      "related_concepts": ["musical-alphabet", "octave"],
+      "difficulty": 1,
+      "learning_objectives": [
+        "Name the seven natural notes (A, B, C, D, E, F, G)",
+        "Understand that note names repeat in different octaves"
+      ],
+      "examples": [
+        "The white keys on a piano are named A, B, C, D, E, F, G",
+        "After G, the pattern repeats with A"
+      ],
+      "tags": ["fundamental", "notation", "naming"]
+    },
+    {
+      "id": "octave",
+      "name": "Octave",
+      "description": "The interval between one pitch and another with double or half its frequency; notes an octave apart share the same letter name",
+      "atomicity": "atomic",
+      "prerequisites": ["pitch", "note-name"],
+      "related_concepts": ["interval", "frequency", "register"],
+      "difficulty": 2,
+      "learning_objectives": [
+        "Recognize that notes an octave apart sound similar but higher or lower",
+        "Understand that an octave represents a doubling or halving of frequency"
+      ],
+      "examples": [
+        "C4 (middle C) to C5 is one octave",
+        "A440 to A880 is one octave"
+      ],
+      "tags": ["fundamental", "interval", "pitch-relationship"]
+    },
+    {
+      "id": "staff",
+      "name": "Staff (Stave)",
+      "description": "A set of five horizontal lines and four spaces used to notate music",
+      "atomicity": "atomic",
+      "prerequisites": ["note"],
+      "related_concepts": ["clef", "ledger-lines", "notation"],
+      "difficulty": 1,
+      "learning_objectives": [
+        "Identify the five lines and four spaces of the staff",
+        "Understand that different positions represent different pitches"
+      ],
+      "examples": [
+        "Notes can be placed on lines or in spaces",
+        "Higher positions on the staff indicate higher pitches"
+      ],
+      "tags": ["notation", "visual", "fundamental"]
+    },
+    {
+      "id": "clef",
+      "name": "Clef",
+      "description": "A symbol placed at the beginning of the staff to indicate which pitches are represented by the lines and spaces",
+      "atomicity": "atomic",
+      "prerequisites": ["staff", "note-name"],
+      "related_concepts": ["treble-clef", "bass-clef", "alto-clef"],
+      "difficulty": 2,
+      "learning_objectives": [
+        "Understand that clefs assign specific pitches to staff positions",
+        "Recognize the purpose of different clefs for different pitch ranges"
+      ],
+      "examples": [
+        "Treble clef (G clef) is used for higher-pitched instruments",
+        "Bass clef (F clef) is used for lower-pitched instruments"
+      ],
+      "tags": ["notation", "reading", "fundamental"]
+    },
+    {
+      "id": "treble-clef",
+      "name": "Treble Clef (G Clef)",
+      "description": "A clef that places G above middle C on the second line of the staff",
+      "atomicity": "atomic",
+      "prerequisites": ["clef", "staff"],
+      "related_concepts": ["bass-clef", "note-reading"],
+      "difficulty": 2,
+      "learning_objectives": [
+        "Read notes in treble clef",
+        "Identify that the treble clef curl wraps around the G line"
+      ],
+      "examples": [
+        "Piano right hand typically uses treble clef",
+        "Violin music is written in treble clef"
+      ],
+      "tags": ["notation", "reading", "clef"]
+    },
+    {
+      "id": "bass-clef",
+      "name": "Bass Clef (F Clef)",
+      "description": "A clef that places F below middle C on the fourth line of the staff",
+      "atomicity": "atomic",
+      "prerequisites": ["clef", "staff"],
+      "related_concepts": ["treble-clef", "note-reading"],
+      "difficulty": 2,
+      "learning_objectives": [
+        "Read notes in bass clef",
+        "Identify that the bass clef dots surround the F line"
+      ],
+      "examples": [
+        "Piano left hand typically uses bass clef",
+        "Cello music is written in bass clef"
+      ],
+      "tags": ["notation", "reading", "clef"]
+    },
+    {
+      "id": "ledger-lines",
+      "name": "Ledger Lines",
+      "description": "Short lines added above or below the staff to extend its range",
+      "atomicity": "atomic",
+      "prerequisites": ["staff"],
+      "related_concepts": ["note-reading", "range"],
+      "difficulty": 2,
+      "learning_objectives": [
+        "Read notes on ledger lines",
+        "Understand that ledger lines extend the staff's pitch range"
+      ],
+      "examples": [
+        "Middle C is on a ledger line below the treble clef staff",
+        "High notes may require multiple ledger lines above the staff"
+      ],
+      "tags": ["notation", "reading", "extension"]
+    },
+    {
+      "id": "accidental",
+      "name": "Accidental",
+      "description": "A symbol that alters the pitch of a note (sharp, flat, natural)",
+      "atomicity": "atomic",
+      "prerequisites": ["note", "pitch"],
+      "related_concepts": ["sharp", "flat", "natural", "half-step"],
+      "difficulty": 2,
+      "learning_objectives": [
+        "Identify sharp, flat, and natural symbols",
+        "Understand that accidentals modify the pitch of notes"
+      ],
+      "examples": [
+        "A sharp raises a note by a half step",
+        "A flat lowers a note by a half step",
+        "A natural cancels a previous accidental"
+      ],
+      "tags": ["notation", "pitch-modification", "chromatic"]
+    },
+    {
+      "id": "sharp",
+      "name": "Sharp (#)",
+      "description": "An accidental that raises a note by one half step",
+      "atomicity": "atomic",
+      "prerequisites": ["accidental", "half-step"],
+      "related_concepts": ["flat", "natural", "enharmonic"],
+      "difficulty": 2,
+      "learning_objectives": [
+        "Identify the sharp symbol",
+        "Apply sharps to raise pitches by a half step"
+      ],
+      "examples": [
+        "C# is one half step higher than C",
+        "F# is the black key to the right of F on a piano"
+      ],
+      "tags": ["notation", "accidental", "chromatic"]
+    },
+    {
+      "id": "flat",
+      "name": "Flat (♭)",
+      "description": "An accidental that lowers a note by one half step",
+      "atomicity": "atomic",
+      "prerequisites": ["accidental", "half-step"],
+      "related_concepts": ["sharp", "natural", "enharmonic"],
+      "difficulty": 2,
+      "learning_objectives": [
+        "Identify the flat symbol",
+        "Apply flats to lower pitches by a half step"
+      ],
+      "examples": [
+        "B♭ is one half step lower than B",
+        "E♭ is the black key to the left of E on a piano"
+      ],
+      "tags": ["notation", "accidental", "chromatic"]
+    },
+    {
+      "id": "natural",
+      "name": "Natural (♮)",
+      "description": "An accidental that cancels a previous sharp or flat, returning to the natural pitch",
+      "atomicity": "atomic",
+      "prerequisites": ["accidental"],
+      "related_concepts": ["sharp", "flat", "key-signature"],
+      "difficulty": 2,
+      "learning_objectives": [
+        "Identify the natural symbol",
+        "Understand when and why naturals are used"
+      ],
+      "examples": [
+        "If a note was F#, an F♮ returns it to F natural",
+        "Naturals are used to cancel key signature accidentals"
+      ],
+      "tags": ["notation", "accidental", "cancellation"]
+    },
+    {
+      "id": "half-step",
+      "name": "Half Step (Semitone)",
+      "description": "The smallest interval in Western music, the distance between two adjacent keys on a piano",
+      "atomicity": "atomic",
+      "prerequisites": ["pitch", "interval"],
+      "related_concepts": ["whole-step", "chromatic", "accidental"],
+      "difficulty": 2,
+      "learning_objectives": [
+        "Identify half steps on a keyboard and in notation",
+        "Understand half steps as the building blocks of intervals"
+      ],
+      "examples": [
+        "E to F is a half step (no black key between)",
+        "C to C# is a half step",
+        "B to C is a half step"
+      ],
+      "tags": ["interval", "fundamental", "distance"]
+    },
+    {
+      "id": "whole-step",
+      "name": "Whole Step (Tone)",
+      "description": "An interval equal to two half steps",
+      "atomicity": "atomic",
+      "prerequisites": ["half-step", "interval"],
+      "related_concepts": ["half-step", "scale", "interval"],
+      "difficulty": 2,
+      "learning_objectives": [
+        "Identify whole steps on a keyboard and in notation",
+        "Understand that a whole step equals two half steps"
+      ],
+      "examples": [
+        "C to D is a whole step",
+        "F to G is a whole step",
+        "G to A is a whole step"
+      ],
+      "tags": ["interval", "fundamental", "distance"]
+    },
+    {
+      "id": "interval",
+      "name": "Interval",
+      "description": "The distance between two pitches, measured in steps and quality",
+      "atomicity": "atomic",
+      "prerequisites": ["pitch", "note"],
+      "related_concepts": ["half-step", "whole-step", "scale", "chord"],
+      "difficulty": 2,
+      "learning_objectives": [
+        "Understand intervals as the relationship between two pitches",
+        "Recognize that intervals are fundamental to harmony and melody"
+      ],
+      "examples": [
+        "C to E is an interval",
+        "G to D is an interval",
+        "Intervals can be played simultaneously (harmonic) or sequentially (melodic)"
+      ],
+      "tags": ["relationship", "distance", "fundamental"]
+    },
+    {
+      "id": "interval-number",
+      "name": "Interval Number",
+      "description": "The numeric size of an interval, counting letter names inclusively (unison, 2nd, 3rd, 4th, 5th, 6th, 7th, octave)",
+      "atomicity": "atomic",
+      "prerequisites": ["interval", "note-name"],
+      "related_concepts": ["interval-quality", "scale-degree"],
+      "difficulty": 3,
+      "learning_objectives": [
+        "Count interval numbers by counting letter names",
+        "Identify intervals from unison to octave"
+      ],
+      "examples": [
+        "C to E is a 3rd (C=1, D=2, E=3)",
+        "F to C is a 5th (F=1, G=2, A=3, B=4, C=5)"
+      ],
+      "tags": ["interval", "counting", "analysis"]
+    },
+    {
+      "id": "interval-quality",
+      "name": "Interval Quality",
+      "description": "The specific character of an interval (major, minor, perfect, augmented, diminished)",
+      "atomicity": "atomic",
+      "prerequisites": ["interval-number", "half-step"],
+      "related_concepts": ["major-interval", "minor-interval", "perfect-interval"],
+      "difficulty": 4,
+      "learning_objectives": [
+        "Distinguish between major and minor intervals",
+        "Identify perfect intervals",
+        "Understand augmented and diminished intervals"
+      ],
+      "examples": [
+        "C to E is a major 3rd (4 half steps)",
+        "C to E♭ is a minor 3rd (3 half steps)",
+        "C to G is a perfect 5th (7 half steps)"
+      ],
+      "tags": ["interval", "quality", "analysis"]
+    },
+    {
+      "id": "perfect-interval",
+      "name": "Perfect Interval",
+      "description": "Intervals with a unique, stable quality: unison, 4th, 5th, and octave",
+      "atomicity": "atomic",
+      "prerequisites": ["interval-quality"],
+      "related_concepts": ["perfect-fifth", "perfect-fourth", "consonance"],
+      "difficulty": 4,
+      "learning_objectives": [
+        "Identify perfect unisons, 4ths, 5ths, and octaves",
+        "Understand the acoustic stability of perfect intervals"
+      ],
+      "examples": [
+        "C to C is a perfect unison (0 half steps)",
+        "C to F is a perfect 4th (5 half steps)",
+        "C to G is a perfect 5th (7 half steps)",
+        "C to C' is a perfect octave (12 half steps)"
+      ],
+      "tags": ["interval", "quality", "consonance"]
+    },
+    {
+      "id": "major-interval",
+      "name": "Major Interval",
+      "description": "The larger form of 2nds, 3rds, 6ths, and 7ths found in the major scale",
+      "atomicity": "atomic",
+      "prerequisites": ["interval-quality"],
+      "related_concepts": ["minor-interval", "major-scale"],
+      "difficulty": 4,
+      "learning_objectives": [
+        "Identify major 2nds, 3rds, 6ths, and 7ths",
+        "Understand that major intervals are derived from the major scale"
+      ],
+      "examples": [
+        "C to D is a major 2nd (2 half steps)",
+        "C to E is a major 3rd (4 half steps)",
+        "C to A is a major 6th (9 half steps)",
+        "C to B is a major 7th (11 half steps)"
+      ],
+      "tags": ["interval", "quality", "major"]
+    },
+    {
+      "id": "minor-interval",
+      "name": "Minor Interval",
+      "description": "The smaller form of 2nds, 3rds, 6ths, and 7ths, one half step smaller than major",
+      "atomicity": "atomic",
+      "prerequisites": ["interval-quality", "major-interval"],
+      "related_concepts": ["major-interval", "minor-scale"],
+      "difficulty": 4,
+      "learning_objectives": [
+        "Identify minor 2nds, 3rds, 6ths, and 7ths",
+        "Understand that minor intervals are one half step smaller than major"
+      ],
+      "examples": [
+        "C to D♭ is a minor 2nd (1 half step)",
+        "C to E♭ is a minor 3rd (3 half steps)",
+        "C to A♭ is a minor 6th (8 half steps)",
+        "C to B♭ is a minor 7th (10 half steps)"
+      ],
+      "tags": ["interval", "quality", "minor"]
+    },
+    {
+      "id": "rhythm",
+      "name": "Rhythm",
+      "description": "The pattern of durations and accents in music over time",
+      "atomicity": "atomic",
+      "prerequisites": ["duration"],
+      "related_concepts": ["beat", "meter", "tempo", "note-value"],
+      "difficulty": 2,
+      "learning_objectives": [
+        "Understand rhythm as the organization of time in music",
+        "Recognize basic rhythmic patterns"
+      ],
+      "examples": [
+        "A steady quarter note pattern: ♩ ♩ ♩ ♩",
+        "A syncopated rhythm with varied durations"
+      ],
+      "tags": ["time", "pattern", "fundamental"]
+    },
+    {
+      "id": "beat",
+      "name": "Beat",
+      "description": "A regular pulse that underlies music, like a musical heartbeat",
+      "atomicity": "atomic",
+      "prerequisites": ["rhythm"],
+      "related_concepts": ["tempo", "meter", "pulse"],
+      "difficulty": 1,
+      "learning_objectives": [
+        "Feel and identify the beat in music",
+        "Understand beat as the basic unit of musical time"
+      ],
+      "examples": [
+        "Tapping your foot to music follows the beat",
+        "A metronome click marks each beat"
+      ],
+      "tags": ["time", "pulse", "fundamental"]
+    },
+    {
+      "id": "tempo",
+      "name": "Tempo",
+      "description": "The speed of the beat, typically measured in beats per minute (BPM)",
+      "atomicity": "atomic",
+      "prerequisites": ["beat"],
+      "related_concepts": ["metronome", "tempo-marking"],
+      "difficulty": 2,
+      "learning_objectives": [
+        "Understand tempo as the speed of music",
+        "Recognize common tempo markings (Allegro, Andante, etc.)"
+      ],
+      "examples": [
+        "Allegro = fast tempo (120-168 BPM)",
+        "Andante = walking tempo (76-108 BPM)",
+        "Adagio = slow tempo (66-76 BPM)"
+      ],
+      "tags": ["time", "speed", "expression"]
+    },
+    {
+      "id": "meter",
+      "name": "Meter",
+      "description": "The organization of beats into regular patterns of strong and weak beats",
+      "atomicity": "atomic",
+      "prerequisites": ["beat"],
+      "related_concepts": ["time-signature", "measure", "bar"],
+      "difficulty": 2,
+      "learning_objectives": [
+        "Recognize common meters (4/4, 3/4, 6/8)",
+        "Feel the difference between duple, triple, and other meters"
+      ],
+      "examples": [
+        "4/4 time: STRONG-weak-medium-weak",
+        "3/4 time (waltz): STRONG-weak-weak"
+      ],
+      "tags": ["time", "pattern", "organization"]
+    },
+    {
+      "id": "time-signature",
+      "name": "Time Signature",
+      "description": "A notation showing the meter: top number = beats per measure, bottom number = note value for the beat",
+      "atomicity": "atomic",
+      "prerequisites": ["meter", "note-value"],
+      "related_concepts": ["measure", "bar", "meter"],
+      "difficulty": 3,
+      "learning_objectives": [
+        "Read and interpret time signatures",
+        "Understand the meaning of both numbers in a time signature"
+      ],
+      "examples": [
+        "4/4 = four quarter notes per measure",
+        "3/4 = three quarter notes per measure",
+        "6/8 = six eighth notes per measure"
+      ],
+      "tags": ["notation", "time", "meter"]
+    },
+    {
+      "id": "measure",
+      "name": "Measure (Bar)",
+      "description": "A segment of time defined by the time signature, separated by vertical bar lines",
+      "atomicity": "atomic",
+      "prerequisites": ["meter", "time-signature"],
+      "related_concepts": ["bar-line", "rhythm"],
+      "difficulty": 2,
+      "learning_objectives": [
+        "Identify measures in written music",
+        "Understand that measures organize music into equal time units"
+      ],
+      "examples": [
+        "In 4/4 time, each measure contains four beats",
+        "Bar lines separate one measure from the next"
+      ],
+      "tags": ["notation", "time", "organization"]
+    },
+    {
+      "id": "note-value",
+      "name": "Note Value (Note Duration)",
+      "description": "The relative duration of a note (whole, half, quarter, eighth, etc.)",
+      "atomicity": "atomic",
+      "prerequisites": ["duration", "note"],
+      "related_concepts": ["rest", "rhythm", "time-signature"],
+      "difficulty": 2,
+      "learning_objectives": [
+        "Identify common note values and their symbols",
+        "Understand the relative durations of different note values"
+      ],
+      "examples": [
+        "Whole note (𝅝) = 4 beats in 4/4 time",
+        "Half note (𝅗𝅥) = 2 beats in 4/4 time",
+        "Quarter note (♩) = 1 beat in 4/4 time",
+        "Eighth note (♪) = 1/2 beat in 4/4 time"
+      ],
+      "tags": ["notation", "duration", "rhythm"]
+    },
+    {
+      "id": "rest",
+      "name": "Rest",
+      "description": "A symbol indicating silence for a specific duration",
+      "atomicity": "atomic",
+      "prerequisites": ["note-value", "duration"],
+      "related_concepts": ["rhythm", "note-value"],
+      "difficulty": 2,
+      "learning_objectives": [
+        "Identify rest symbols and their durations",
+        "Understand that rests are as important as notes in rhythm"
+      ],
+      "examples": [
+        "Whole rest = 4 beats of silence in 4/4 time",
+        "Quarter rest = 1 beat of silence in 4/4 time"
+      ],
+      "tags": ["notation", "silence", "rhythm"]
+    },
+    {
+      "id": "dot",
+      "name": "Dot (Dotted Note)",
+      "description": "A dot placed after a note or rest that increases its duration by half",
+      "atomicity": "atomic",
+      "prerequisites": ["note-value"],
+      "related_concepts": ["rhythm", "duration"],
+      "difficulty": 3,
+      "learning_objectives": [
+        "Calculate the duration of dotted notes",
+        "Understand the dot adds half the original value"
+      ],
+      "examples": [
+        "Dotted half note = 3 beats (2 + 1)",
+        "Dotted quarter note = 1.5 beats (1 + 0.5)"
+      ],
+      "tags": ["notation", "duration", "augmentation"]
+    },
+    {
+      "id": "tie",
+      "name": "Tie",
+      "description": "A curved line connecting two notes of the same pitch, combining their durations",
+      "atomicity": "atomic",
+      "prerequisites": ["note-value", "duration"],
+      "related_concepts": ["dot", "rhythm"],
+      "difficulty": 3,
+      "learning_objectives": [
+        "Recognize tied notes in notation",
+        "Calculate the total duration of tied notes"
+      ],
+      "examples": [
+        "A quarter note tied to another quarter note = 2 beats total",
+        "Ties are used to sustain notes across bar lines"
+      ],
+      "tags": ["notation", "duration", "connection"]
+    },
+    {
+      "id": "scale",
+      "name": "Scale",
+      "description": "An ordered collection of pitches, typically spanning an octave, following a specific pattern of intervals",
+      "atomicity": "atomic",
+      "prerequisites": ["interval", "octave", "note-name"],
+      "related_concepts": ["major-scale", "minor-scale", "key"],
+      "difficulty": 3,
+      "learning_objectives": [
+        "Understand scales as organized collections of pitches",
+        "Recognize that scales are built using specific interval patterns"
+      ],
+      "examples": [
+        "The C major scale: C-D-E-F-G-A-B-C",
+        "Scales provide the tonal framework for melodies and harmonies"
+      ],
+      "tags": ["pitch-collection", "organization", "fundamental"]
+    },
+    {
+      "id": "major-scale",
+      "name": "Major Scale",
+      "description": "A seven-note scale with the interval pattern: W-W-H-W-W-W-H (W=whole step, H=half step)",
+      "atomicity": "atomic",
+      "prerequisites": ["scale", "whole-step", "half-step"],
+      "related_concepts": ["minor-scale", "key", "mode"],
+      "difficulty": 3,
+      "learning_objectives": [
+        "Build major scales from any starting note",
+        "Recognize the characteristic bright sound of major scales"
+      ],
+      "examples": [
+        "C major scale: C-D-E-F-G-A-B-C (no sharps or flats)",
+        "G major scale: G-A-B-C-D-E-F#-G (one sharp: F#)"
+      ],
+      "tags": ["scale", "major", "diatonic"]
+    },
+    {
+      "id": "minor-scale",
+      "name": "Minor Scale",
+      "description": "A seven-note scale with a darker, more somber character than major; exists in natural, harmonic, and melodic forms",
+      "atomicity": "atomic",
+      "prerequisites": ["scale", "whole-step", "half-step"],
+      "related_concepts": ["major-scale", "natural-minor", "harmonic-minor", "melodic-minor"],
+      "difficulty": 4,
+      "learning_objectives": [
+        "Build natural minor scales using W-H-W-W-H-W-W pattern",
+        "Recognize the darker sound of minor scales"
+      ],
+      "examples": [
+        "A natural minor: A-B-C-D-E-F-G-A",
+        "E natural minor: E-F#-G-A-B-C-D-E"
+      ],
+      "tags": ["scale", "minor", "diatonic"]
+    },
+    {
+      "id": "scale-degree",
+      "name": "Scale Degree",
+      "description": "The position of a note within a scale, numbered 1-7 (or 1-8 including the octave)",
+      "atomicity": "atomic",
+      "prerequisites": ["scale"],
+      "related_concepts": ["tonic", "dominant", "subdominant", "roman-numeral-analysis"],
+      "difficulty": 3,
+      "learning_objectives": [
+        "Identify scale degrees by number",
+        "Understand the functional names of scale degrees"
+      ],
+      "examples": [
+        "In C major: C=1 (tonic), D=2, E=3, F=4 (subdominant), G=5 (dominant), A=6, B=7 (leading tone)",
+        "Scale degrees show the relationship of notes to the tonal center"
+      ],
+      "tags": ["scale", "analysis", "function"]
+    },
+    {
+      "id": "tonic",
+      "name": "Tonic",
+      "description": "The first scale degree and home note of a key; provides the strongest sense of stability and resolution",
+      "atomicity": "atomic",
+      "prerequisites": ["scale-degree", "key"],
+      "related_concepts": ["dominant", "subdominant", "key"],
+      "difficulty": 3,
+      "learning_objectives": [
+        "Identify the tonic of a key",
+        "Understand the tonic as the point of greatest stability"
+      ],
+      "examples": [
+        "In the key of C major, C is the tonic",
+        "Melodies and pieces typically end on the tonic"
+      ],
+      "tags": ["scale-degree", "function", "stability"]
+    },
+    {
+      "id": "dominant",
+      "name": "Dominant",
+      "description": "The fifth scale degree; creates tension that resolves to the tonic",
+      "atomicity": "atomic",
+      "prerequisites": ["scale-degree", "tonic"],
+      "related_concepts": ["dominant-chord", "resolution", "cadence"],
+      "difficulty": 4,
+      "learning_objectives": [
+        "Identify the dominant in any key",
+        "Understand the dominant's role in creating tension and motion"
+      ],
+      "examples": [
+        "In C major, G is the dominant",
+        "Dominant chords typically resolve to tonic chords"
+      ],
+      "tags": ["scale-degree", "function", "tension"]
+    },
+    {
+      "id": "key",
+      "name": "Key",
+      "description": "The tonal center of a piece, based on a specific scale (e.g., the key of C major or A minor)",
+      "atomicity": "atomic",
+      "prerequisites": ["scale", "tonic"],
+      "related_concepts": ["key-signature", "tonality", "major-scale", "minor-scale"],
+      "difficulty": 3,
+      "learning_objectives": [
+        "Identify the key of a piece from its key signature",
+        "Understand that key establishes the tonal framework"
+      ],
+      "examples": [
+        "A piece in the key of G major is based on the G major scale",
+        "The key signature shows which notes are sharp or flat throughout"
+      ],
+      "tags": ["tonality", "organization", "fundamental"]
+    },
+    {
+      "id": "key-signature",
+      "name": "Key Signature",
+      "description": "Sharps or flats placed at the beginning of the staff to indicate the key",
+      "atomicity": "atomic",
+      "prerequisites": ["key", "accidental", "staff"],
+      "related_concepts": ["sharp", "flat", "major-scale", "minor-scale"],
+      "difficulty": 3,
+      "learning_objectives": [
+        "Read key signatures to identify the key",
+        "Understand the order of sharps and flats in key signatures"
+      ],
+      "examples": [
+        "One sharp (F#) = G major or E minor",
+        "Two flats (B♭, E♭) = B♭ major or G minor",
+        "Order of sharps: F#-C#-G#-D#-A#-E#-B#",
+        "Order of flats: B♭-E♭-A♭-D♭-G♭-C♭-F♭"
+      ],
+      "tags": ["notation", "key", "reading"]
+    },
+    {
+      "id": "chord",
+      "name": "Chord",
+      "description": "Three or more notes played simultaneously, creating harmony",
+      "atomicity": "atomic",
+      "prerequisites": ["interval", "harmony"],
+      "related_concepts": ["triad", "seventh-chord", "harmony"],
+      "difficulty": 3,
+      "learning_objectives": [
+        "Understand chords as simultaneous pitch combinations",
+        "Recognize chords as the foundation of harmony"
+      ],
+      "examples": [
+        "C-E-G played together forms a C major chord",
+        "Chords can be played on piano, guitar, or by multiple instruments"
+      ],
+      "tags": ["harmony", "vertical", "fundamental"]
+    },
+    {
+      "id": "triad",
+      "name": "Triad",
+      "description": "A three-note chord built by stacking two thirds (root, third, fifth)",
+      "atomicity": "atomic",
+      "prerequisites": ["chord", "interval"],
+      "related_concepts": ["major-triad", "minor-triad", "diminished-triad", "augmented-triad"],
+      "difficulty": 3,
+      "learning_objectives": [
+        "Identify the root, third, and fifth of a triad",
+        "Build triads from any root note"
+      ],
+      "examples": [
+        "C major triad: C (root) - E (third) - G (fifth)",
+        "Triads are the most basic and common chords"
+      ],
+      "tags": ["chord", "harmony", "basic"]
+    },
+    {
+      "id": "major-triad",
+      "name": "Major Triad",
+      "description": "A triad with a major third (4 half steps) and perfect fifth (7 half steps) above the root",
+      "atomicity": "atomic",
+      "prerequisites": ["triad", "major-interval"],
+      "related_concepts": ["minor-triad", "major-scale", "chord-quality"],
+      "difficulty": 4,
+      "learning_objectives": [
+        "Build major triads from any root",
+        "Recognize the bright, happy sound of major triads"
+      ],
+      "examples": [
+        "C major: C-E-G (major 3rd + minor 3rd)",
+        "G major: G-B-D"
+      ],
+      "tags": ["chord", "major", "quality"]
+    },
+    {
+      "id": "minor-triad",
+      "name": "Minor Triad",
+      "description": "A triad with a minor third (3 half steps) and perfect fifth (7 half steps) above the root",
+      "atomicity": "atomic",
+      "prerequisites": ["triad", "minor-interval"],
+      "related_concepts": ["major-triad", "minor-scale", "chord-quality"],
+      "difficulty": 4,
+      "learning_objectives": [
+        "Build minor triads from any root",
+        "Recognize the darker, sadder sound of minor triads"
+      ],
+      "examples": [
+        "A minor: A-C-E (minor 3rd + major 3rd)",
+        "D minor: D-F-A"
+      ],
+      "tags": ["chord", "minor", "quality"]
+    },
+    {
+      "id": "diminished-triad",
+      "name": "Diminished Triad",
+      "description": "A triad with a minor third and diminished fifth (6 half steps) above the root",
+      "atomicity": "atomic",
+      "prerequisites": ["triad", "minor-interval"],
+      "related_concepts": ["augmented-triad", "chord-quality", "dissonance"],
+      "difficulty": 5,
+      "learning_objectives": [
+        "Build diminished triads from any root",
+        "Recognize the tense, unstable sound of diminished triads"
+      ],
+      "examples": [
+        "B diminished: B-D-F (minor 3rd + minor 3rd)",
+        "Often used as leading-tone chords"
+      ],
+      "tags": ["chord", "diminished", "quality"]
+    },
+    {
+      "id": "augmented-triad",
+      "name": "Augmented Triad",
+      "description": "A triad with a major third and augmented fifth (8 half steps) above the root",
+      "atomicity": "atomic",
+      "prerequisites": ["triad", "major-interval"],
+      "related_concepts": ["diminished-triad", "chord-quality"],
+      "difficulty": 5,
+      "learning_objectives": [
+        "Build augmented triads from any root",
+        "Recognize the bright, unsettled sound of augmented triads"
+      ],
+      "examples": [
+        "C augmented: C-E-G# (major 3rd + major 3rd)",
+        "Less common than major, minor, and diminished triads"
+      ],
+      "tags": ["chord", "augmented", "quality"]
+    },
+    {
+      "id": "seventh-chord",
+      "name": "Seventh Chord",
+      "description": "A four-note chord built by adding a seventh above the root to a triad",
+      "atomicity": "atomic",
+      "prerequisites": ["triad", "interval"],
+      "related_concepts": ["dominant-seventh", "major-seventh", "minor-seventh"],
+      "difficulty": 5,
+      "learning_objectives": [
+        "Identify seventh chords by their structure",
+        "Understand that seventh chords add color and tension to harmony"
+      ],
+      "examples": [
+        "C7 (dominant seventh): C-E-G-B♭",
+        "Cmaj7 (major seventh): C-E-G-B"
+      ],
+      "tags": ["chord", "extended", "harmony"]
+    },
+    {
+      "id": "chord-inversion",
+      "name": "Chord Inversion",
+      "description": "A rearrangement of chord tones so that a note other than the root is in the bass",
+      "atomicity": "atomic",
+      "prerequisites": ["chord", "triad"],
+      "related_concepts": ["root-position", "first-inversion", "second-inversion"],
+      "difficulty": 5,
+      "learning_objectives": [
+        "Identify chord inversions",
+        "Understand that inversions create smoother voice leading"
+      ],
+      "examples": [
+        "C major root position: C-E-G (C in bass)",
+        "C major first inversion: E-G-C (E in bass)",
+        "C major second inversion: G-C-E (G in bass)"
+      ],
+      "tags": ["chord", "voicing", "bass"]
+    },
+    {
+      "id": "harmony",
+      "name": "Harmony",
+      "description": "The combination of simultaneous pitches; the vertical aspect of music",
+      "atomicity": "atomic",
+      "prerequisites": ["interval", "chord"],
+      "related_concepts": ["chord", "consonance", "dissonance"],
+      "difficulty": 3,
+      "learning_objectives": [
+        "Understand harmony as the vertical dimension of music",
+        "Recognize how harmony supports and enriches melody"
+      ],
+      "examples": [
+        "A piano accompaniment providing chords under a melody",
+        "Multiple voices singing different notes simultaneously"
+      ],
+      "tags": ["vertical", "combination", "fundamental"]
+    },
+    {
+      "id": "melody",
+      "name": "Melody",
+      "description": "A sequence of pitches perceived as a single, coherent musical line; the horizontal aspect of music",
+      "atomicity": "atomic",
+      "prerequisites": ["pitch", "rhythm", "note"],
+      "related_concepts": ["harmony", "motif", "phrase"],
+      "difficulty": 2,
+      "learning_objectives": [
+        "Recognize melody as a succession of pitches over time",
+        "Understand melody as the \"tune\" of a piece"
+      ],
+      "examples": [
+        "The tune you whistle or hum from a song",
+        "A vocal line in a pop song"
+      ],
+      "tags": ["horizontal", "linear", "fundamental"]
+    },
+    {
+      "id": "consonance",
+      "name": "Consonance",
+      "description": "Intervals or chords that sound stable, pleasant, and restful",
+      "atomicity": "atomic",
+      "prerequisites": ["harmony", "interval"],
+      "related_concepts": ["dissonance", "perfect-interval", "stability"],
+      "difficulty": 4,
+      "learning_objectives": [
+        "Identify consonant intervals (unisons, 3rds, 5ths, 6ths, octaves)",
+        "Recognize the stable sound of consonance"
+      ],
+      "examples": [
+        "Perfect octaves and fifths are very consonant",
+        "Major and minor thirds are consonant",
+        "Major triads have a consonant sound"
+      ],
+      "tags": ["quality", "perception", "stability"]
+    },
+    {
+      "id": "dissonance",
+      "name": "Dissonance",
+      "description": "Intervals or chords that sound unstable, tense, and seek resolution",
+      "atomicity": "atomic",
+      "prerequisites": ["harmony", "interval"],
+      "related_concepts": ["consonance", "resolution", "tension"],
+      "difficulty": 4,
+      "learning_objectives": [
+        "Identify dissonant intervals (2nds, 7ths, tritone)",
+        "Understand that dissonance creates tension and motion in music"
+      ],
+      "examples": [
+        "Minor 2nds and major 7ths are highly dissonant",
+        "The tritone (augmented 4th/diminished 5th) is very dissonant",
+        "Dissonant chords typically resolve to consonant ones"
+      ],
+      "tags": ["quality", "perception", "tension"]
+    },
+    {
+      "id": "chord-progression",
+      "name": "Chord Progression",
+      "description": "A succession of chords played in sequence",
+      "atomicity": "atomic",
+      "prerequisites": ["chord", "harmony"],
+      "related_concepts": ["cadence", "functional-harmony", "roman-numeral-analysis"],
+      "difficulty": 4,
+      "learning_objectives": [
+        "Recognize common chord progressions",
+        "Understand that progressions create harmonic motion and structure"
+      ],
+      "examples": [
+        "I-IV-V-I (C-F-G-C in C major)",
+        "ii-V-I (common in jazz)",
+        "I-V-vi-IV (popular in contemporary music)"
+      ],
+      "tags": ["harmony", "sequence", "structure"]
+    },
+    {
+      "id": "cadence",
+      "name": "Cadence",
+      "description": "A harmonic or melodic formula that creates a sense of resolution or rest at the end of a phrase",
+      "atomicity": "atomic",
+      "prerequisites": ["chord-progression", "phrase"],
+      "related_concepts": ["authentic-cadence", "plagal-cadence", "deceptive-cadence"],
+      "difficulty": 5,
+      "learning_objectives": [
+        "Identify different types of cadences",
+        "Understand cadences as musical punctuation"
+      ],
+      "examples": [
+        "Authentic cadence: V-I (sounds conclusive)",
+        "Plagal cadence: IV-I (\"Amen\" cadence)",
+        "Half cadence: ends on V (sounds incomplete)"
+      ],
+      "tags": ["harmony", "phrase-ending", "structure"]
+    },
+    {
+      "id": "phrase",
+      "name": "Phrase",
+      "description": "A musical unit, typically 2-8 measures, that expresses a complete musical thought",
+      "atomicity": "atomic",
+      "prerequisites": ["melody", "measure"],
+      "related_concepts": ["cadence", "period", "motif"],
+      "difficulty": 4,
+      "learning_objectives": [
+        "Identify phrases in music",
+        "Understand phrases as musical \"sentences\""
+      ],
+      "examples": [
+        "\"Twinkle, twinkle, little star\" is a musical phrase",
+        "Phrases often end with cadences"
+      ],
+      "tags": ["structure", "melody", "form"]
+    },
+    {
+      "id": "motif",
+      "name": "Motif (Motive)",
+      "description": "A short musical idea that recurs and develops throughout a piece",
+      "atomicity": "atomic",
+      "prerequisites": ["melody", "rhythm"],
+      "related_concepts": ["theme", "phrase", "development"],
+      "difficulty": 4,
+      "learning_objectives": [
+        "Identify motifs in music",
+        "Recognize how motifs are varied and developed"
+      ],
+      "examples": [
+        "The four-note \"fate\" motif in Beethoven's Fifth Symphony",
+        "A short rhythmic or melodic pattern that repeats"
+      ],
+      "tags": ["melody", "development", "structure"]
+    },
+    {
+      "id": "transposition",
+      "name": "Transposition",
+      "description": "Moving a melody, chord, or entire piece to a different pitch level while maintaining the same intervals",
+      "atomicity": "atomic",
+      "prerequisites": ["interval", "key"],
+      "related_concepts": ["key", "modulation", "interval"],
+      "difficulty": 5,
+      "learning_objectives": [
+        "Transpose melodies to different keys",
+        "Understand that transposition preserves interval relationships"
+      ],
+      "examples": [
+        "Moving a melody from C major to G major",
+        "Raising a song by a whole step to suit a singer's range"
+      ],
+      "tags": ["transformation", "key", "pitch"]
+    },
+    {
+      "id": "modulation",
+      "name": "Modulation",
+      "description": "Changing from one key to another within a piece of music",
+      "atomicity": "atomic",
+      "prerequisites": ["key", "key-signature"],
+      "related_concepts": ["transposition", "key", "pivot-chord"],
+      "difficulty": 6,
+      "learning_objectives": [
+        "Recognize when music modulates to a new key",
+        "Understand common modulation techniques"
+      ],
+      "examples": [
+        "Moving from C major to G major in the middle of a piece",
+        "Many songs modulate up a half or whole step for the final chorus"
+      ],
+      "tags": ["key-change", "harmony", "advanced"]
+    },
+    {
+      "id": "dynamics",
+      "name": "Dynamics (Musical Dynamics)",
+      "description": "Variations in loudness; indicated by symbols like p (piano/soft) and f (forte/loud)",
+      "atomicity": "atomic",
+      "prerequisites": ["volume"],
+      "related_concepts": ["expression", "crescendo", "diminuendo"],
+      "difficulty": 2,
+      "learning_objectives": [
+        "Interpret dynamic markings",
+        "Understand dynamics as a tool for musical expression"
+      ],
+      "examples": [
+        "pp (pianissimo) = very soft",
+        "ff (fortissimo) = very loud",
+        "mf (mezzo-forte) = moderately loud"
+      ],
+      "tags": ["expression", "volume", "notation"]
+    },
+    {
+      "id": "articulation",
+      "name": "Articulation",
+      "description": "The way notes are played or sung, affecting their attack, sustain, and release",
+      "atomicity": "atomic",
+      "prerequisites": ["note"],
+      "related_concepts": ["staccato", "legato", "accent"],
+      "difficulty": 3,
+      "learning_objectives": [
+        "Recognize articulation markings in notation",
+        "Perform notes with appropriate articulation"
+      ],
+      "examples": [
+        "Staccato (dots above notes) = short and detached",
+        "Legato (curved line) = smooth and connected",
+        "Accent (>) = emphasized"
+      ],
+      "tags": ["expression", "performance", "notation"]
+    },
+    {
+      "id": "form",
+      "name": "Musical Form",
+      "description": "The overall structure or architecture of a piece of music",
+      "atomicity": "atomic",
+      "prerequisites": ["phrase"],
+      "related_concepts": ["binary-form", "ternary-form", "sonata-form", "rondo"],
+      "difficulty": 5,
+      "learning_objectives": [
+        "Identify common musical forms",
+        "Understand how form organizes musical material"
+      ],
+      "examples": [
+        "Binary form: AB (two contrasting sections)",
+        "Ternary form: ABA (return to opening material)",
+        "Verse-chorus form in popular music"
+      ],
+      "tags": ["structure", "organization", "large-scale"]
+    },
+    {
+      "id": "texture",
+      "name": "Musical Texture",
+      "description": "The way melodic, rhythmic, and harmonic materials are combined in music",
+      "atomicity": "atomic",
+      "prerequisites": ["melody", "harmony"],
+      "related_concepts": ["monophonic", "homophonic", "polyphonic"],
+      "difficulty": 4,
+      "learning_objectives": [
+        "Identify different musical textures",
+        "Understand how texture affects the character of music"
+      ],
+      "examples": [
+        "Monophonic: a single melody line (Gregorian chant)",
+        "Homophonic: melody with accompaniment (most pop songs)",
+        "Polyphonic: multiple independent melody lines (fugue)"
+      ],
+      "tags": ["combination", "layers", "structure"]
+    },
+    {
+      "id": "voice-leading",
+      "name": "Voice Leading",
+      "description": "The way individual melodic lines (voices) move from one chord to another",
+      "atomicity": "atomic",
+      "prerequisites": ["chord-progression", "melody"],
+      "related_concepts": ["harmony", "counterpoint", "part-writing"],
+      "difficulty": 6,
+      "learning_objectives": [
+        "Understand principles of smooth voice leading",
+        "Write chord progressions with good voice leading"
+      ],
+      "examples": [
+        "Moving by step rather than leap when possible",
+        "Avoiding parallel fifths and octaves",
+        "Resolving tendency tones (like the leading tone to tonic)"
+      ],
+      "tags": ["harmony", "counterpoint", "advanced"]
+    },
+    {
+      "id": "roman-numeral-analysis",
+      "name": "Roman Numeral Analysis",
+      "description": "A system for labeling chords based on their scale degree using Roman numerals (I, ii, iii, IV, V, vi, vii°)",
+      "atomicity": "atomic",
+      "prerequisites": ["chord", "scale-degree", "key"],
+      "related_concepts": ["chord-progression", "functional-harmony"],
+      "difficulty": 5,
+      "learning_objectives": [
+        "Label chords with Roman numerals",
+        "Understand that uppercase = major, lowercase = minor",
+        "Analyze chord progressions using Roman numerals"
+      ],
+      "examples": [
+        "In C major: C chord = I, Dm = ii, G = V",
+        "I-IV-V-I progression (tonic-subdominant-dominant-tonic)"
+      ],
+      "tags": ["analysis", "harmony", "theory"]
+    },
+    {
+      "id": "enharmonic",
+      "name": "Enharmonic Equivalents",
+      "description": "Notes that sound the same but are written differently (e.g., C# and D♭)",
+      "atomicity": "atomic",
+      "prerequisites": ["sharp", "flat", "pitch"],
+      "related_concepts": ["accidental", "key-signature"],
+      "difficulty": 4,
+      "learning_objectives": [
+        "Identify enharmonic equivalents",
+        "Understand when to use each spelling"
+      ],
+      "examples": [
+        "C# = D♭ (same pitch, different notation)",
+        "F# = G♭",
+        "E# = F (enharmonic but unusual spelling)"
+      ],
+      "tags": ["notation", "pitch", "equivalence"]
+    },
+    {
+      "id": "chromatic",
+      "name": "Chromatic",
+      "description": "Relating to all twelve pitches (including sharps and flats) rather than just the seven notes of a diatonic scale",
+      "atomicity": "atomic",
+      "prerequisites": ["accidental", "scale"],
+      "related_concepts": ["chromatic-scale", "diatonic", "half-step"],
+      "difficulty": 4,
+      "learning_objectives": [
+        "Understand the chromatic scale as all twelve pitches",
+        "Recognize chromatic notes as those outside the key"
+      ],
+      "examples": [
+        "The chromatic scale: C-C#-D-D#-E-F-F#-G-G#-A-A#-B-C",
+        "A chromatic passage uses notes outside the diatonic scale"
+      ],
+      "tags": ["pitch-collection", "all-notes", "advanced"]
+    },
+    {
+      "id": "diatonic",
+      "name": "Diatonic",
+      "description": "Relating to the seven notes of a major or minor scale, without chromatic alterations",
+      "atomicity": "atomic",
+      "prerequisites": ["scale", "key"],
+      "related_concepts": ["major-scale", "minor-scale", "chromatic"],
+      "difficulty": 4,
+      "learning_objectives": [
+        "Identify diatonic notes within a key",
+        "Distinguish diatonic from chromatic notes"
+      ],
+      "examples": [
+        "In C major, C-D-E-F-G-A-B are diatonic",
+        "C# would be chromatic in C major"
+      ],
+      "tags": ["pitch-collection", "scale-based", "key"]
+    }
+  ],
+  "relationships": [
+    {
+      "from": "pitch",
+      "to": "sound",
+      "type": "requires",
+      "strength": "mandatory"
+    },
+    {
+      "from": "duration",
+      "to": "sound",
+      "type": "requires",
+      "strength": "mandatory"
+    },
+    {
+      "from": "volume",
+      "to": "sound",
+      "type": "requires",
+      "strength": "mandatory"
+    },
+    {
+      "from": "timbre",
+      "to": "sound",
+      "type": "requires",
+      "strength": "mandatory"
+    },
+    {
+      "from": "note",
+      "to": "pitch",
+      "type": "requires",
+      "strength": "mandatory"
+    },
+    {
+      "from": "note",
+      "to": "duration",
+      "type": "requires",
+      "strength": "mandatory"
+    },
+    {
+      "from": "note-name",
+      "to": "note",
+      "type": "requires",
+      "strength": "mandatory"
+    },
+    {
+      "from": "octave",
+      "to": "pitch",
+      "type": "requires",
+      "strength": "mandatory"
+    },
+    {
+      "from": "staff",
+      "to": "note",
+      "type": "represents",
+      "strength": "mandatory"
+    },
+    {
+      "from": "clef",
+      "to": "staff",
+      "type": "requires",
+      "strength": "mandatory"
+    },
+    {
+      "from": "treble-clef",
+      "to": "clef",
+      "type": "is_a",
+      "strength": "mandatory"
+    },
+    {
+      "from": "bass-clef",
+      "to": "clef",
+      "type": "is_a",
+      "strength": "mandatory"
+    },
+    {
+      "from": "ledger-lines",
+      "to": "staff",
+      "type": "extends",
+      "strength": "optional"
+    },
+    {
+      "from": "accidental",
+      "to": "note",
+      "type": "modifies",
+      "strength": "optional"
+    },
+    {
+      "from": "sharp",
+      "to": "accidental",
+      "type": "is_a",
+      "strength": "mandatory"
+    },
+    {
+      "from": "flat",
+      "to": "accidental",
+      "type": "is_a",
+      "strength": "mandatory"
+    },
+    {
+      "from": "natural",
+      "to": "accidental",
+      "type": "is_a",
+      "strength": "mandatory"
+    },
+    {
+      "from": "sharp",
+      "to": "half-step",
+      "type": "uses",
+      "strength": "mandatory"
+    },
+    {
+      "from": "flat",
+      "to": "half-step",
+      "type": "uses",
+      "strength": "mandatory"
+    },
+    {
+      "from": "whole-step",
+      "to": "half-step",
+      "type": "builds_upon",
+      "strength": "mandatory"
+    },
+    {
+      "from": "interval",
+      "to": "pitch",
+      "type": "requires",
+      "strength": "mandatory"
+    },
+    {
+      "from": "interval-number",
+      "to": "interval",
+      "type": "describes",
+      "strength": "mandatory"
+    },
+    {
+      "from": "interval-quality",
+      "to": "interval-number",
+      "type": "refines",
+      "strength": "mandatory"
+    },
+    {
+      "from": "perfect-interval",
+      "to": "interval-quality",
+      "type": "is_a",
+      "strength": "mandatory"
+    },
+    {
+      "from": "major-interval",
+      "to": "interval-quality",
+      "type": "is_a",
+      "strength": "mandatory"
+    },
+    {
+      "from": "minor-interval",
+      "to": "interval-quality",
+      "type": "is_a",
+      "strength": "mandatory"
+    },
+    {
+      "from": "rhythm",
+      "to": "duration",
+      "type": "organizes",
+      "strength": "mandatory"
+    },
+    {
+      "from": "beat",
+      "to": "rhythm",
+      "type": "is_foundation_of",
+      "strength": "mandatory"
+    },
+    {
+      "from": "tempo",
+      "to": "beat",
+      "type": "measures_speed_of",
+      "strength": "mandatory"
+    },
+    {
+      "from": "meter",
+      "to": "beat",
+      "type": "organizes",
+      "strength": "mandatory"
+    },
+    {
+      "from": "time-signature",
+      "to": "meter",
+      "type": "notates",
+      "strength": "mandatory"
+    },
+    {
+      "from": "measure",
+      "to": "meter",
+      "type": "implements",
+      "strength": "mandatory"
+    },
+    {
+      "from": "note-value",
+      "to": "duration",
+      "type": "specifies",
+      "strength": "mandatory"
+    },
+    {
+      "from": "rest",
+      "to": "note-value",
+      "type": "parallels",
+      "strength": "mandatory"
+    },
+    {
+      "from": "dot",
+      "to": "note-value",
+      "type": "modifies",
+      "strength": "optional"
+    },
+    {
+      "from": "tie",
+      "to": "note-value",
+      "type": "extends",
+      "strength": "optional"
+    },
+    {
+      "from": "scale",
+      "to": "interval",
+      "type": "builds_upon",
+      "strength": "mandatory"
+    },
+    {
+      "from": "scale",
+      "to": "octave",
+      "type": "spans",
+      "strength": "typical"
+    },
+    {
+      "from": "major-scale",
+      "to": "scale",
+      "type": "is_a",
+      "strength": "mandatory"
+    },
+    {
+      "from": "minor-scale",
+      "to": "scale",
+      "type": "is_a",
+      "strength": "mandatory"
+    },
+    {
+      "from": "scale-degree",
+      "to": "scale",
+      "type": "describes_position_in",
+      "strength": "mandatory"
+    },
+    {
+      "from": "tonic",
+      "to": "scale-degree",
+      "type": "is_a",
+      "strength": "mandatory"
+    },
+    {
+      "from": "dominant",
+      "to": "scale-degree",
+      "type": "is_a",
+      "strength": "mandatory"
+    },
+    {
+      "from": "key",
+      "to": "scale",
+      "type": "based_on",
+      "strength": "mandatory"
+    },
+    {
+      "from": "key",
+      "to": "tonic",
+      "type": "defines",
+      "strength": "mandatory"
+    },
+    {
+      "from": "key-signature",
+      "to": "key",
+      "type": "notates",
+      "strength": "mandatory"
+    },
+    {
+      "from": "chord",
+      "to": "interval",
+      "type": "builds_upon",
+      "strength": "mandatory"
+    },
+    {
+      "from": "chord",
+      "to": "harmony",
+      "type": "creates",
+      "strength": "mandatory"
+    },
+    {
+      "from": "triad",
+      "to": "chord",
+      "type": "is_a",
+      "strength": "mandatory"
+    },
+    {
+      "from": "major-triad",
+      "to": "triad",
+      "type": "is_a",
+      "strength": "mandatory"
+    },
+    {
+      "from": "minor-triad",
+      "to": "triad",
+      "type": "is_a",
+      "strength": "mandatory"
+    },
+    {
+      "from": "diminished-triad",
+      "to": "triad",
+      "type": "is_a",
+      "strength": "mandatory"
+    },
+    {
+      "from": "augmented-triad",
+      "to": "triad",
+      "type": "is_a",
+      "strength": "mandatory"
+    },
+    {
+      "from": "seventh-chord",
+      "to": "triad",
+      "type": "extends",
+      "strength": "mandatory"
+    },
+    {
+      "from": "chord-inversion",
+      "to": "chord",
+      "type": "rearranges",
+      "strength": "optional"
+    },
+    {
+      "from": "harmony",
+      "to": "interval",
+      "type": "builds_upon",
+      "strength": "mandatory"
+    },
+    {
+      "from": "melody",
+      "to": "pitch",
+      "type": "sequences",
+      "strength": "mandatory"
+    },
+    {
+      "from": "melody",
+      "to": "rhythm",
+      "type": "requires",
+      "strength": "mandatory"
+    },
+    {
+      "from": "consonance",
+      "to": "harmony",
+      "type": "describes",
+      "strength": "mandatory"
+    },
+    {
+      "from": "dissonance",
+      "to": "harmony",
+      "type": "describes",
+      "strength": "mandatory"
+    },
+    {
+      "from": "chord-progression",
+      "to": "chord",
+      "type": "sequences",
+      "strength": "mandatory"
+    },
+    {
+      "from": "cadence",
+      "to": "chord-progression",
+      "type": "concludes",
+      "strength": "mandatory"
+    },
+    {
+      "from": "phrase",
+      "to": "melody",
+      "type": "organizes",
+      "strength": "mandatory"
+    },
+    {
+      "from": "motif",
+      "to": "melody",
+      "type": "is_fragment_of",
+      "strength": "mandatory"
+    },
+    {
+      "from": "transposition",
+      "to": "interval",
+      "type": "preserves",
+      "strength": "mandatory"
+    },
+    {
+      "from": "modulation",
+      "to": "key",
+      "type": "changes",
+      "strength": "mandatory"
+    },
+    {
+      "from": "dynamics",
+      "to": "volume",
+      "type": "controls",
+      "strength": "mandatory"
+    },
+    {
+      "from": "articulation",
+      "to": "note",
+      "type": "modifies_performance_of",
+      "strength": "optional"
+    },
+    {
+      "from": "form",
+      "to": "phrase",
+      "type": "organizes",
+      "strength": "mandatory"
+    },
+    {
+      "from": "texture",
+      "to": "melody",
+      "type": "organizes",
+      "strength": "mandatory"
+    },
+    {
+      "from": "texture",
+      "to": "harmony",
+      "type": "organizes",
+      "strength": "mandatory"
+    },
+    {
+      "from": "voice-leading",
+      "to": "chord-progression",
+      "type": "connects",
+      "strength": "mandatory"
+    },
+    {
+      "from": "roman-numeral-analysis",
+      "to": "chord",
+      "type": "labels",
+      "strength": "mandatory"
+    },
+    {
+      "from": "roman-numeral-analysis",
+      "to": "scale-degree",
+      "type": "based_on",
+      "strength": "mandatory"
+    },
+    {
+      "from": "enharmonic",
+      "to": "sharp",
+      "type": "relates",
+      "strength": "optional"
+    },
+    {
+      "from": "enharmonic",
+      "to": "flat",
+      "type": "relates",
+      "strength": "optional"
+    },
+    {
+      "from": "chromatic",
+      "to": "half-step",
+      "type": "uses",
+      "strength": "mandatory"
+    },
+    {
+      "from": "diatonic",
+      "to": "scale",
+      "type": "describes",
+      "strength": "mandatory"
+    }
+  ],
+  "metadata": {
+    "created_at": "2025-10-23",
+    "author": "Personal Learning Assistant 2026",
+    "license": "MIT",
+    "concept_count": 91,
+    "description": "A comprehensive atomic-granularity concept graph for music theory, designed to support personalized learning paths and adaptive education systems."
+  }
+}
