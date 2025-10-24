@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Theory Mini-LMS Player</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .header h1 {
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            width: 200px;
+            height: 8px;
+            background-color: rgba(255,255,255,0.3);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: #4caf50;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .progress-text {
+            font-size: 0.85em;
+            margin-top: 5px;
+            opacity: 0.9;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 320px;
+            background-color: white;
+            border-right: 1px solid #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            margin-top: 60px;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+        }
+
+        .search-box {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+            background-color: #fafafa;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-size: 14px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .search-box input:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .concepts-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        .difficulty-group {
+            margin-bottom: 20px;
+        }
+
+        .difficulty-header {
+            font-weight: 600;
+            color: #667eea;
+            padding: 10px 15px;
+            background-color: #f8f9ff;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .concept-item {
+            padding: 12px 15px;
+            margin: 4px 0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 1px solid transparent;
+            position: relative;
+        }
+
+        .concept-item:hover {
+            background-color: #f8f9ff;
+            border-color: #667eea;
+            transform: translateX(2px);
+        }
+
+        .concept-item.active {
+            background-color: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        .concept-item.completed::after {
+            content: '✓';
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #4caf50;
+            font-weight: bold;
+        }
+
+        .concept-item.active.completed::after {
+            color: white;
+        }
+
+        .concept-name {
+            font-weight: 500;
+            font-size: 0.95em;
+        }
+
+        .concept-tags {
+            font-size: 0.75em;
+            opacity: 0.7;
+            margin-top: 4px;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            margin-top: 60px;
+            overflow-y: auto;
+            background-color: white;
+        }
+
+        .content-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        .welcome-screen {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .welcome-screen h2 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .welcome-screen p {
+            color: #666;
+            font-size: 1.2em;
+            line-height: 1.8;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .stat-number {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1em;
+            opacity: 0.9;
+        }
+
+        .concept-content {
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .concept-content iframe {
+            width: 100%;
+            border: none;
+            min-height: calc(100vh - 140px);
+        }
+
+        .prerequisites-panel {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+
+        .prerequisites-panel h3 {
+            color: #856404;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .prerequisite-item {
+            display: inline-block;
+            background-color: white;
+            padding: 8px 15px;
+            margin: 5px;
+            border-radius: 20px;
+            border: 1px solid #ffc107;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.9em;
+        }
+
+        .prerequisite-item:hover {
+            background-color: #ffc107;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 2px 8px rgba(255, 193, 7, 0.3);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+        }
+
+        .loading::after {
+            content: '...';
+            animation: dots 1.5s infinite;
+        }
+
+        @keyframes dots {
+            0%, 20% { content: '.'; }
+            40% { content: '..'; }
+            60%, 100% { content: '...'; }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                position: fixed;
+                left: -100%;
+                transition: left 0.3s ease;
+                z-index: 999;
+            }
+
+            .sidebar.open {
+                left: 0;
+            }
+
+            .header h1 {
+                font-size: 1.2em;
+            }
+
+            .progress-bar {
+                width: 150px;
+            }
+
+            .content-wrapper {
+                padding: 20px;
+            }
+        }
+
+        /* Custom Scrollbar */
+        .concepts-list::-webkit-scrollbar,
+        .main-content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .concepts-list::-webkit-scrollbar-track,
+        .main-content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .concepts-list::-webkit-scrollbar-thumb,
+        .main-content::-webkit-scrollbar-thumb {
+            background: #667eea;
+            border-radius: 4px;
+        }
+
+        .concepts-list::-webkit-scrollbar-thumb:hover,
+        .main-content::-webkit-scrollbar-thumb:hover {
+            background: #5568d3;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 40px 20px;
+            color: #999;
+        }
+
+        .reset-button {
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+
+        .reset-button:hover {
+            background-color: #e64a19;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Music Theory Course</h1>
+        <div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-text" id="progressText">0 / 91 concepts completed</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search concepts...">
+            </div>
+            <div class="concepts-list" id="conceptsList">
+                <div class="loading">Loading concepts</div>
+            </div>
+        </div>
+
+        <div class="main-content" id="mainContent">
+            <div class="content-wrapper">
+                <div class="welcome-screen">
+                    <h2>Welcome to Music Theory!</h2>
+                    <p>
+                        Explore 91 comprehensive music theory concepts, from fundamental building blocks
+                        to advanced harmonic analysis. Select a concept from the sidebar to begin your
+                        learning journey.
+                    </p>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number" id="totalConcepts">91</div>
+                            <div class="stat-label">Total Concepts</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" id="completedConcepts">0</div>
+                            <div class="stat-label">Completed</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" id="difficultyLevels">6</div>
+                            <div class="stat-label">Difficulty Levels</div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 40px;">
+                        <button class="reset-button" onclick="resetProgress()">Reset Progress</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let conceptsData = null;
+        let completedConcepts = new Set();
+        const STORAGE_KEY = 'musicTheoryProgress';
+
+        // Load progress from localStorage
+        function loadProgress() {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            if (saved) {
+                completedConcepts = new Set(JSON.parse(saved));
+            }
+        }
+
+        // Save progress to localStorage
+        function saveProgress() {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify([...completedConcepts]));
+        }
+
+        // Reset progress
+        function resetProgress() {
+            if (confirm('Are you sure you want to reset all progress? This cannot be undone.')) {
+                completedConcepts.clear();
+                saveProgress();
+                updateProgress();
+                renderConcepts(conceptsData.concepts);
+                alert('Progress has been reset!');
+            }
+        }
+
+        // Update progress bar
+        function updateProgress() {
+            const total = conceptsData ? conceptsData.concepts.length : 91;
+            const completed = completedConcepts.size;
+            const percentage = (completed / total) * 100;
+
+            document.getElementById('progressFill').style.width = percentage + '%';
+            document.getElementById('progressText').textContent = `${completed} / ${total} concepts completed`;
+            document.getElementById('completedConcepts').textContent = completed;
+        }
+
+        // Load concepts data
+        async function loadConcepts() {
+            try {
+                const response = await fetch('music-theory-concepts.json');
+                conceptsData = await response.json();
+                renderConcepts(conceptsData.concepts);
+                updateProgress();
+            } catch (error) {
+                console.error('Error loading concepts:', error);
+                document.getElementById('conceptsList').innerHTML =
+                    '<div class="no-results">Error loading concepts. Please refresh the page.</div>';
+            }
+        }
+
+        // Render concepts grouped by difficulty
+        function renderConcepts(concepts) {
+            const conceptsList = document.getElementById('conceptsList');
+
+            if (concepts.length === 0) {
+                conceptsList.innerHTML = '<div class="no-results">No concepts found</div>';
+                return;
+            }
+
+            // Group by difficulty
+            const grouped = {};
+            concepts.forEach(concept => {
+                const diff = concept.difficulty || 1;
+                if (!grouped[diff]) {
+                    grouped[diff] = [];
+                }
+                grouped[diff].push(concept);
+            });
+
+            // Sort and render
+            let html = '';
+            Object.keys(grouped).sort((a, b) => a - b).forEach(difficulty => {
+                html += `<div class="difficulty-group">
+                    <div class="difficulty-header">Level ${difficulty}</div>`;
+
+                grouped[difficulty].forEach(concept => {
+                    const isCompleted = completedConcepts.has(concept.id);
+                    const completedClass = isCompleted ? 'completed' : '';
+                    const tags = concept.tags ? concept.tags.slice(0, 2).join(', ') : '';
+
+                    html += `<div class="concept-item ${completedClass}" data-concept-id="${concept.id}">
+                        <div class="concept-name">${concept.name}</div>
+                        ${tags ? `<div class="concept-tags">${tags}</div>` : ''}
+                    </div>`;
+                });
+
+                html += '</div>';
+            });
+
+            conceptsList.innerHTML = html;
+
+            // Add click listeners
+            document.querySelectorAll('.concept-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    const conceptId = item.dataset.conceptId;
+                    loadConceptContent(conceptId);
+                });
+            });
+        }
+
+        // Load concept content
+        function loadConceptContent(conceptId) {
+            const concept = conceptsData.concepts.find(c => c.id === conceptId);
+            if (!concept) return;
+
+            // Mark as active
+            document.querySelectorAll('.concept-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            document.querySelector(`[data-concept-id="${conceptId}"]`).classList.add('active');
+
+            // Mark as completed
+            if (!completedConcepts.has(conceptId)) {
+                completedConcepts.add(conceptId);
+                saveProgress();
+                updateProgress();
+                document.querySelector(`[data-concept-id="${conceptId}"]`).classList.add('completed');
+            }
+
+            // Build content
+            let html = '<div class="concept-content">';
+
+            // Prerequisites section
+            if (concept.prerequisites && concept.prerequisites.length > 0) {
+                html += '<div class="prerequisites-panel">';
+                html += '<h3>Prerequisites</h3>';
+                html += '<div>';
+                concept.prerequisites.forEach(prereqId => {
+                    const prereq = conceptsData.concepts.find(c => c.id === prereqId);
+                    if (prereq) {
+                        html += `<span class="prerequisite-item" onclick="loadConceptContent('${prereqId}')">${prereq.name}</span>`;
+                    }
+                });
+                html += '</div></div>';
+            }
+
+            // Load HTML content
+            html += `<iframe src="canvas_music_theory_course/wiki_content/${conceptId}.html"
+                            onload="this.style.height=(this.contentWindow.document.body.scrollHeight+20)+'px'">
+                     </iframe>`;
+
+            html += '</div>';
+
+            document.getElementById('mainContent').innerHTML =
+                '<div class="content-wrapper">' + html + '</div>';
+
+            // Scroll to top
+            document.getElementById('mainContent').scrollTop = 0;
+        }
+
+        // Search functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            loadProgress();
+            loadConcepts();
+
+            const searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('input', (e) => {
+                const searchTerm = e.target.value.toLowerCase();
+                if (!conceptsData) return;
+
+                if (searchTerm === '') {
+                    renderConcepts(conceptsData.concepts);
+                } else {
+                    const filtered = conceptsData.concepts.filter(concept =>
+                        concept.name.toLowerCase().includes(searchTerm) ||
+                        concept.description.toLowerCase().includes(searchTerm) ||
+                        (concept.tags && concept.tags.some(tag => tag.toLowerCase().includes(searchTerm)))
+                    );
+                    renderConcepts(filtered);
+                }
+            });
+        });
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            // Ctrl/Cmd + K to focus search
+            if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                e.preventDefault();
+                document.getElementById('searchInput').focus();
+            }
+        });
+    </script>
+</body>
+</html>
