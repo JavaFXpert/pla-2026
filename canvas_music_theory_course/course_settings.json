@@ -1,0 +1,10 @@
+{
+  "course_name": "Comprehensive Music Theory Course",
+  "course_code": "MUSIC-THEORY-101",
+  "start_date": "2025-10-23T17:51:32.030236",
+  "conclude_date": null,
+  "is_public": false,
+  "syllabus_body": "<h2>Welcome to Comprehensive Music Theory!</h2><p>This course covers all fundamental and advanced concepts in music theory, from basic sound properties to advanced harmonic analysis.</p>",
+  "grading_standard_enabled": true,
+  "course_format": "online"
+}

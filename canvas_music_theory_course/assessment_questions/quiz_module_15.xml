@@ -1,0 +1,159 @@
+<?xml version="1.0" ?>
+<questestinterop xmlns="http://www.imsglobal.org/xsd/ims_qtiasiv1p2">
+  <item ident="i3f7125ae1cf8416089da24be52cd3923" title="Understanding Transposition">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Which of the following best describes Transposition?</mattext>
+      </material>
+      <response_lid ident="response1" rcardinality="Single">
+        <render_choice>
+          <response_label ident="correct">
+            <material>
+              <mattext>Moving a melody, chord, or entire piece to a different pitch level while maintaining the same intervals</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor1">
+            <material>
+              <mattext>A musical term for tempo variations</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor2">
+            <material>
+              <mattext>A type of musical instrument</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor3">
+            <material>
+              <mattext>A performance technique</mattext>
+            </material>
+          </response_label>
+        </render_choice>
+      </response_lid>
+    </presentation>
+  </item>
+  <item ident="ic0b12c14ca2d43b18e6ba8ead427ae23" title="Application: Transposition">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Explain in your own words: Transpose melodies to different keys</mattext>
+      </material>
+      <response_str ident="response1" rcardinality="Single"/>
+    </presentation>
+  </item>
+  <item ident="i3f03f607b0f243d79bb3bd2810fc14d7" title="Understanding Modulation">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Which of the following best describes Modulation?</mattext>
+      </material>
+      <response_lid ident="response1" rcardinality="Single">
+        <render_choice>
+          <response_label ident="correct">
+            <material>
+              <mattext>Changing from one key to another within a piece of music</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor1">
+            <material>
+              <mattext>A musical term for tempo variations</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor2">
+            <material>
+              <mattext>A type of musical instrument</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor3">
+            <material>
+              <mattext>A performance technique</mattext>
+            </material>
+          </response_label>
+        </render_choice>
+      </response_lid>
+    </presentation>
+  </item>
+  <item ident="i6be5f5bdf1fc4d0f8afe5a9eb3803227" title="Application: Modulation">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Explain in your own words: Recognize when music modulates to a new key</mattext>
+      </material>
+      <response_str ident="response1" rcardinality="Single"/>
+    </presentation>
+  </item>
+  <item ident="icebfb18f69d64491a6ec26799d72be12" title="Understanding Voice Leading">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Which of the following best describes Voice Leading?</mattext>
+      </material>
+      <response_lid ident="response1" rcardinality="Single">
+        <render_choice>
+          <response_label ident="correct">
+            <material>
+              <mattext>The way individual melodic lines (voices) move from one chord to another</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor1">
+            <material>
+              <mattext>A musical term for tempo variations</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor2">
+            <material>
+              <mattext>A type of musical instrument</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor3">
+            <material>
+              <mattext>A performance technique</mattext>
+            </material>
+          </response_label>
+        </render_choice>
+      </response_lid>
+    </presentation>
+  </item>
+  <item ident="i5b6de857a5524707be3faed4da5a4eae" title="Application: Voice Leading">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Explain in your own words: Understand principles of smooth voice leading</mattext>
+      </material>
+      <response_str ident="response1" rcardinality="Single"/>
+    </presentation>
+  </item>
+  <item ident="idde396a5e4ab4e87a1f0c87902f8bde8" title="Understanding Roman Numeral Analysis">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Which of the following best describes Roman Numeral Analysis?</mattext>
+      </material>
+      <response_lid ident="response1" rcardinality="Single">
+        <render_choice>
+          <response_label ident="correct">
+            <material>
+              <mattext>A system for labeling chords based on their scale degree using Roman numerals (I, ii, iii, IV, V, vi, vii°)</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor1">
+            <material>
+              <mattext>A musical term for tempo variations</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor2">
+            <material>
+              <mattext>A type of musical instrument</mattext>
+            </material>
+          </response_label>
+          <response_label ident="distractor3">
+            <material>
+              <mattext>A performance technique</mattext>
+            </material>
+          </response_label>
+        </render_choice>
+      </response_lid>
+    </presentation>
+  </item>
+  <item ident="i79ae087f86b74fdea1fdf0db4fecdfce" title="Application: Roman Numeral Analysis">
+    <presentation>
+      <material>
+        <mattext texttype="text/html">Explain in your own words: Label chords with Roman numerals</mattext>
+      </material>
+      <response_str ident="response1" rcardinality="Single"/>
+    </presentation>
+  </item>
+</questestinterop>
