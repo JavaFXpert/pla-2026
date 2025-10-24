@@ -19,68 +19,99 @@ with open('music-theory-concepts.json', 'r') as f:
 
 concepts = {c['id']: c for c in data['concepts']}
 
-# Define module structure based on difficulty and topics
-modules = [
-    {
-        "title": "Module 1: Foundations of Sound and Music",
-        "concepts": ["sound", "pitch", "duration", "volume", "timbre", "note", "note-name", "beat"]
-    },
-    {
-        "title": "Module 2: Musical Notation Basics",
-        "concepts": ["staff", "clef", "treble-clef", "bass-clef", "ledger-lines"]
-    },
-    {
-        "title": "Module 3: Rhythm and Time",
-        "concepts": ["rhythm", "tempo", "meter", "time-signature", "measure", "note-value", "rest", "dot", "tie"]
-    },
-    {
-        "title": "Module 4: Accidentals and Steps",
-        "concepts": ["accidental", "sharp", "flat", "natural", "half-step", "whole-step"]
-    },
-    {
-        "title": "Module 5: Intervals Foundation",
-        "concepts": ["interval", "octave", "interval-number"]
-    },
-    {
-        "title": "Module 6: Interval Quality",
-        "concepts": ["interval-quality", "perfect-interval", "major-interval", "minor-interval"]
-    },
-    {
-        "title": "Module 7: Scales",
-        "concepts": ["scale", "major-scale", "minor-scale", "scale-degree", "tonic", "dominant"]
-    },
-    {
-        "title": "Module 8: Keys and Key Signatures",
-        "concepts": ["key", "key-signature", "enharmonic", "diatonic", "chromatic"]
-    },
-    {
-        "title": "Module 9: Chords and Triads",
-        "concepts": ["harmony", "chord", "triad", "major-triad", "minor-triad"]
-    },
-    {
-        "title": "Module 10: Advanced Chords",
-        "concepts": ["diminished-triad", "augmented-triad", "seventh-chord", "chord-inversion"]
-    },
-    {
-        "title": "Module 11: Harmony and Progressions",
-        "concepts": ["consonance", "dissonance", "chord-progression", "cadence"]
-    },
-    {
-        "title": "Module 12: Melody and Structure",
-        "concepts": ["melody", "phrase", "motif"]
-    },
-    {
-        "title": "Module 13: Musical Expression",
-        "concepts": ["dynamics", "articulation"]
-    },
-    {
-        "title": "Module 14: Form and Texture",
-        "concepts": ["form", "texture"]
-    },
-    {
-        "title": "Module 15: Advanced Theory",
-        "concepts": ["transposition", "modulation", "voice-leading", "roman-numeral-analysis"]
-    }
+# YouTube video mapping for Brad Harrison videos
+# Each concept maps to a search query or topic for Brad Harrison's channel
+brad_harrison_videos = {
+    "sound": "music fundamentals sound",
+    "pitch": "pitch music theory",
+    "duration": "rhythm duration music",
+    "volume": "dynamics volume music",
+    "timbre": "tone color timbre",
+    "note": "musical notes basics",
+    "note-name": "note names music theory",
+    "beat": "beat pulse music",
+    "staff": "staff notation music",
+    "clef": "clef music theory",
+    "treble-clef": "treble clef",
+    "bass-clef": "bass clef",
+    "ledger-lines": "ledger lines",
+    "accidental": "accidentals music theory",
+    "sharp": "sharps music",
+    "flat": "flats music",
+    "natural": "natural signs music",
+    "half-step": "half step semitone",
+    "whole-step": "whole step tone",
+    "interval": "intervals music theory",
+    "octave": "octave music",
+    "interval-number": "interval numbers",
+    "interval-quality": "interval quality",
+    "perfect-interval": "perfect intervals",
+    "major-interval": "major intervals",
+    "minor-interval": "minor intervals",
+    "rhythm": "rhythm music theory",
+    "tempo": "tempo music",
+    "meter": "meter time signature",
+    "time-signature": "time signatures",
+    "measure": "measures bars music",
+    "note-value": "note values duration",
+    "rest": "rests music notation",
+    "dot": "dotted notes",
+    "tie": "ties music notation",
+    "scale": "scales music theory",
+    "major-scale": "major scale",
+    "minor-scale": "minor scale",
+    "scale-degree": "scale degrees",
+    "tonic": "tonic music theory",
+    "dominant": "dominant chord",
+    "key": "key music theory",
+    "key-signature": "key signatures",
+    "enharmonic": "enharmonic equivalents",
+    "diatonic": "diatonic music",
+    "chromatic": "chromatic scale",
+    "harmony": "harmony music theory",
+    "chord": "chords music theory",
+    "triad": "triads music",
+    "major-triad": "major chords triads",
+    "minor-triad": "minor chords triads",
+    "diminished-triad": "diminished chords",
+    "augmented-triad": "augmented chords",
+    "seventh-chord": "seventh chords",
+    "chord-inversion": "chord inversions",
+    "consonance": "consonance music",
+    "dissonance": "dissonance music",
+    "chord-progression": "chord progressions",
+    "cadence": "cadences music theory",
+    "melody": "melody music theory",
+    "phrase": "musical phrases",
+    "motif": "motif motive music",
+    "dynamics": "dynamics music",
+    "articulation": "articulation music",
+    "form": "musical form",
+    "texture": "musical texture",
+    "transposition": "transposition music",
+    "modulation": "modulation music theory",
+    "voice-leading": "voice leading",
+    "roman-numeral-analysis": "roman numeral analysis"
+}
+
+# Organize concepts by difficulty for learning progression
+# Each concept becomes its own section/module
+concept_order = [
+    "sound", "pitch", "duration", "volume", "timbre", "note", "note-name", "beat",
+    "staff", "clef", "treble-clef", "bass-clef", "ledger-lines",
+    "rhythm", "tempo", "meter", "time-signature", "measure", "note-value", "rest", "dot", "tie",
+    "accidental", "sharp", "flat", "natural", "half-step", "whole-step",
+    "interval", "octave", "interval-number",
+    "interval-quality", "perfect-interval", "major-interval", "minor-interval",
+    "scale", "major-scale", "minor-scale", "scale-degree", "tonic", "dominant",
+    "key", "key-signature", "enharmonic", "diatonic", "chromatic",
+    "harmony", "chord", "triad", "major-triad", "minor-triad",
+    "diminished-triad", "augmented-triad", "seventh-chord", "chord-inversion",
+    "consonance", "dissonance", "chord-progression", "cadence",
+    "melody", "phrase", "motif",
+    "dynamics", "articulation",
+    "form", "texture",
+    "transposition", "modulation", "voice-leading", "roman-numeral-analysis"
 ]
 
 # Create output directory structure
@@ -251,6 +282,183 @@ def create_html_page(concept):
 
     return html
 
+def create_video_page(concept_id):
+    """Create an HTML page with embedded Brad Harrison YouTube content"""
+    c = concepts[concept_id]
+    search_query = brad_harrison_videos.get(concept_id, c['name'])
+
+    # YouTube channel URL and ID for Brad Harrison
+    channel_url = "https://www.youtube.com/@BradHarrison"
+    channel_id = "UC5EEcOixvGwVFVsHXWYehHg"
+
+    # Create YouTube search URL for this specific topic
+    youtube_search_url = f"https://www.youtube.com/results?search_query=Brad+Harrison+{search_query.replace(' ', '+')}"
+
+    html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{c['name']} - Video Lesson</title>
+    <style>
+        body {{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }}
+        h1 {{
+            color: #2c3e50;
+            border-bottom: 3px solid #e74c3c;
+            padding-bottom: 10px;
+        }}
+        .video-container {{
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            margin: 30px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }}
+        .video-container iframe {{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }}
+        .instructor-info {{
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }}
+        .instructor-info h2 {{
+            color: #e74c3c;
+            margin-top: 0;
+        }}
+        .action-buttons {{
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }}
+        .btn {{
+            display: inline-block;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+        }}
+        .btn-primary {{
+            background-color: #e74c3c;
+            color: white;
+        }}
+        .btn-primary:hover {{
+            background-color: #c0392b;
+            transform: translateY(-2px);
+        }}
+        .btn-secondary {{
+            background-color: #3498db;
+            color: white;
+        }}
+        .btn-secondary:hover {{
+            background-color: #2980b9;
+            transform: translateY(-2px);
+        }}
+        .note {{
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }}
+        .info-box {{
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }}
+        .info-box h3 {{
+            color: #2c3e50;
+            margin-top: 0;
+        }}
+    </style>
+</head>
+<body>
+    <h1>{c['name']} - Video Lesson</h1>
+
+    <div class="instructor-info">
+        <h2>Learn from Brad Harrison</h2>
+        <p>Brad Harrison is a Toronto-based trumpet player, composer, and music educator with over 214K YouTube subscribers. His channel focuses on music theory, practice techniques, and other musical topics.</p>
+        <p><strong>Topic:</strong> {c['name']}</p>
+    </div>
+
+    <div class="note">
+        <strong>📺 Find Video Content:</strong> Use the buttons below to find Brad Harrison's videos on <strong>{c['name']}</strong>.
+    </div>
+
+    <div class="action-buttons">
+        <a href="{youtube_search_url}" target="_blank" class="btn btn-primary">
+            🔍 Search for {c['name']} Videos
+        </a>
+        <a href="{channel_url}/videos" target="_blank" class="btn btn-secondary">
+            📚 Browse All Videos
+        </a>
+    </div>
+
+    <div class="video-container">
+        <!-- Embed Brad Harrison's channel latest uploads -->
+        <iframe
+            src="https://www.youtube.com/embed?listType=user_uploads&list={channel_id}"
+            allowfullscreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+        </iframe>
+    </div>
+
+    <div class="info-box">
+        <h3>How to Find Relevant Videos</h3>
+        <ol>
+            <li>Click the "<strong>Search for {c['name']} Videos</strong>" button above to find videos specifically about this topic</li>
+            <li>Browse through the embedded playlist of Brad Harrison's latest videos</li>
+            <li>Visit his <a href="{channel_url}" target="_blank">full channel</a> to explore organized playlists</li>
+            <li>Look for videos with titles containing: "{search_query}"</li>
+        </ol>
+    </div>
+
+    <div class="info-box">
+        <h3>After Watching</h3>
+        <ul>
+            <li>Take notes on key concepts explained in the video</li>
+            <li>Try the practice exercises if any are demonstrated</li>
+            <li>Re-watch sections that need clarification</li>
+            <li>Explore more of Brad Harrison's videos on related topics</li>
+            <li>Apply what you learned to your own musical practice</li>
+            <li>Return to the Lesson tab to review the written content</li>
+        </ul>
+    </div>
+
+    <div style="background-color: #e3f2fd; padding: 15px; border-radius: 8px; margin-top: 20px;">
+        <p><em>💡 Tip: Brad Harrison has created hundreds of music theory videos. Use the search button above to find videos specifically about "{c['name']}", or browse his channel to discover related content that will enhance your understanding.</em></p>
+    </div>
+</body>
+</html>"""
+
+    return html
+
 def create_quiz_for_module(module_num, module_data):
     """Create quiz questions for a module"""
     questions = []
@@ -341,39 +549,36 @@ def create_quiz_xml(module_num, questions):
 # Generate all content
 print("Generating Canvas course package...")
 print(f"Total concepts: {len(concepts)}")
-print(f"Total modules: {len(modules)}")
+print(f"Each concept will be its own section with 2 pages")
 
-# Create pages and quizzes for each module
-for module_num, module_data in enumerate(modules, 1):
-    print(f"\nProcessing {module_data['title']}...")
+# Store video page resource IDs
+video_resource_ids = {}
 
-    module_id = generate_id()
-    module_ids[module_num] = module_id
+# Create pages and video pages for each concept
+for concept_id in concept_order:
+    if concept_id in concepts:
+        concept_name = concepts[concept_id]['name']
+        print(f"\nProcessing section: {concept_name}")
 
-    # Create pages for each concept in the module
-    for concept_id in module_data['concepts']:
-        if concept_id in concepts:
-            print(f"  - Creating page for {concepts[concept_id]['name']}")
+        # Create concept page (Page 1)
+        print(f"  - Creating concept page")
+        html_content = create_html_page(concept_id)
+        page_id = generate_id()
+        resource_ids[concept_id] = page_id
+        filename = f"{concept_id}.html"
 
-            # Generate HTML
-            html_content = create_html_page(concept_id)
+        with open(f"{output_dir}/wiki_content/{filename}", 'w') as f:
+            f.write(html_content)
 
-            # Save HTML file
-            page_id = generate_id()
-            resource_ids[concept_id] = page_id
-            filename = f"{concept_id}.html"
+        # Create video page (Page 2)
+        print(f"  - Creating video page with Brad Harrison content")
+        video_content = create_video_page(concept_id)
+        video_page_id = generate_id()
+        video_resource_ids[concept_id] = video_page_id
+        video_filename = f"{concept_id}-video.html"
 
-            with open(f"{output_dir}/wiki_content/{filename}", 'w') as f:
-                f.write(html_content)
-
-    # Create quiz for the module
-    print(f"  - Creating quiz for module {module_num}")
-    questions = create_quiz_for_module(module_num, module_data)
-    quiz_xml = create_quiz_xml(module_num, questions)
-    quiz_id = generate_id()
-
-    with open(f"{output_dir}/assessment_questions/quiz_module_{module_num}.xml", 'w') as f:
-        f.write(quiz_xml)
+        with open(f"{output_dir}/wiki_content/{video_filename}", 'w') as f:
+            f.write(video_content)
 
 # Create manifest XML
 print("\nGenerating imsmanifest.xml...")
@@ -407,28 +612,36 @@ org.set('structure', 'rooted-hierarchy')
 org_title = SubElement(org, 'title')
 org_title.text = 'Comprehensive Music Theory Course'
 
-# Add modules to organization
-for module_num, module_data in enumerate(modules, 1):
-    item = SubElement(org, 'item')
-    item.set('identifier', module_ids[module_num])
+# Add each concept as its own section/module with 2 pages
+for concept_id in concept_order:
+    if concept_id in concepts and concept_id in resource_ids:
+        # Create a section/module for this concept
+        section = SubElement(org, 'item')
+        section.set('identifier', generate_id())
 
-    item_title = SubElement(item, 'title')
-    item_title.text = module_data['title']
+        section_title = SubElement(section, 'title')
+        section_title.text = concepts[concept_id]['name']
 
-    # Add concept pages as sub-items
-    for concept_id in module_data['concepts']:
-        if concept_id in resource_ids:
-            subitem = SubElement(item, 'item')
-            subitem.set('identifier', generate_id())
-            subitem.set('identifierref', resource_ids[concept_id])
+        # Add Page 1: Concept explanation
+        page1 = SubElement(section, 'item')
+        page1.set('identifier', generate_id())
+        page1.set('identifierref', resource_ids[concept_id])
 
-            subitem_title = SubElement(subitem, 'title')
-            subitem_title.text = concepts[concept_id]['name']
+        page1_title = SubElement(page1, 'title')
+        page1_title.text = f"Lesson: {concepts[concept_id]['name']}"
+
+        # Add Page 2: Video from Brad Harrison
+        page2 = SubElement(section, 'item')
+        page2.set('identifier', generate_id())
+        page2.set('identifierref', video_resource_ids[concept_id])
+
+        page2_title = SubElement(page2, 'title')
+        page2_title.text = f"Video: {concepts[concept_id]['name']}"
 
 # Resources section
 resources = SubElement(manifest, 'resources')
 
-# Add wiki page resources
+# Add concept page resources
 for concept_id, page_id in resource_ids.items():
     resource = SubElement(resources, 'resource')
     resource.set('identifier', page_id)
@@ -437,14 +650,14 @@ for concept_id, page_id in resource_ids.items():
     file_elem = SubElement(resource, 'file')
     file_elem.set('href', f"wiki_content/{concept_id}.html")
 
-# Add quiz resources
-for module_num in range(1, len(modules) + 1):
+# Add video page resources
+for concept_id, video_page_id in video_resource_ids.items():
     resource = SubElement(resources, 'resource')
-    resource.set('identifier', generate_id())
-    resource.set('type', 'imsqti_xmlv1p2/imscc_xmlv1p1/assessment')
+    resource.set('identifier', video_page_id)
+    resource.set('type', 'webcontent')
 
     file_elem = SubElement(resource, 'file')
-    file_elem.set('href', f"assessment_questions/quiz_module_{module_num}.xml")
+    file_elem.set('href', f"wiki_content/{concept_id}-video.html")
 
 # Write manifest
 manifest_xml = minidom.parseString(tostring(manifest)).toprettyxml(indent="  ")
@@ -481,10 +694,14 @@ print(f"\n{'='*60}")
 print(f"SUCCESS! Course package created: {package_name}")
 print(f"{'='*60}")
 print(f"\nCourse Statistics:")
-print(f"  - Total Modules: {len(modules)}")
-print(f"  - Total Concepts: {len(concepts)}")
-print(f"  - Total Pages: {len(resource_ids)}")
-print(f"  - Total Quizzes: {len(modules)}")
+print(f"  - Total Sections (one per concept): {len(concept_order)}")
+print(f"  - Total Concept Pages: {len(resource_ids)}")
+print(f"  - Total Video Pages: {len(video_resource_ids)}")
+print(f"  - Total Pages: {len(resource_ids) + len(video_resource_ids)}")
+print(f"\nCourse Structure:")
+print(f"  Each atomic concept is now its own section with:")
+print(f"    • Page 1: Detailed lesson content")
+print(f"    • Page 2: Brad Harrison YouTube video")
 print(f"\nTo import into Canvas:")
 print(f"  1. Log into Canvas")
 print(f"  2. Go to your course")
