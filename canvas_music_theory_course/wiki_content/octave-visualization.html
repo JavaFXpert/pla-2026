@@ -3,264 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Octave - Interactive Visualization</title>
+    <title>Interactive Piano: Octave</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 30px;
-            background-color: #f9f9f9;
-            line-height: 1.6;
-        }
-
-        h1 {
-            color: #2c3e50;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
-            margin-bottom: 30px;
-        }
-
-        .visualization-container {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-        }
-
-        .info-box {
-            background: #e8f4f8;
-            border-left: 4px solid #3498db;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             padding: 20px;
-            margin: 20px 0;
-            border-radius: 4px;
         }
-
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 900px;
+            width: 100%;
+        }
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        .instructions {
+            color: #666;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9ff;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
         .controls {
             margin: 20px 0;
-            padding: 20px;
-            background: #ecf0f1;
-            border-radius: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
         }
-
         button {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border: none;
             padding: 12px 24px;
-            border-radius: 6px;
+            border-radius: 8px;
             cursor: pointer;
             font-size: 16px;
-            margin: 5px;
-            transition: all 0.3s ease;
+            transition: transform 0.2s, box-shadow 0.2s;
+            font-weight: 600;
         }
-
         button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
         }
-
         button:active {
             transform: translateY(0);
         }
-
-        .piano-keyboard {
-            display: flex;
-            margin: 30px 0;
-            position: relative;
-            height: 200px;
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
         }
-
-        .white-key {
-            width: 50px;
-            height: 200px;
-            background: white;
-            border: 2px solid #333;
-            cursor: pointer;
-            position: relative;
-            transition: all 0.1s ease;
-        }
-
-        .white-key:hover {
-            background: #f0f0f0;
-        }
-
-        .white-key.active {
-            background: #667eea;
-            color: white;
-        }
-
-        .black-key {
-            width: 30px;
-            height: 120px;
-            background: #333;
-            border: 2px solid #000;
-            cursor: pointer;
-            position: absolute;
-            z-index: 2;
-            transition: all 0.1s ease;
-            color: white;
-            font-size: 10px;
-        }
-
-        .black-key:hover {
-            background: #555;
-        }
-
-        .black-key.active {
-            background: #764ba2;
-        }
-
-        .key-label {
-            position: absolute;
-            bottom: 10px;
-            width: 100%;
-            text-align: center;
-            font-size: 12px;
-            font-weight: bold;
-        }
-
-        .value-display {
-            font-size: 24px;
-            font-weight: bold;
-            color: #667eea;
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        canvas {
-            display: block;
-            margin: 20px auto;
-        }
-
         input[type="range"] {
-            width: 100%;
-            margin: 10px 0;
+            flex: 1;
+            min-width: 150px;
         }
-
-        .slider-container {
+        label {
+            color: #333;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+        select {
+            padding: 8px 12px;
+            border: 2px solid #667eea;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        canvas {
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
             margin: 20px 0;
+            display: block;
+            width: 100%;
+            background: white;
+        }
+        .value-display {
+            color: #667eea;
+            font-weight: bold;
+            min-width: 60px;
         }
     </style>
 </head>
 <body>
-    <h1>Octave - Interactive Visualization</h1>
-
-    <div class="visualization-container">
-        <div class="info-box">
-            <strong>Octave</strong><br>
-            The interval between one pitch and another with double or half its frequency; notes an octave apart share the same letter name
-            <br><br>
-            <em>This interactive visualization helps you understand Octave through hands-on exploration.</em>
-        </div>
-
-        <div class="piano-keyboard" id="keyboard"></div>
-
-        <div class="value-display" id="display">Click a key to play a note</div>
-
+    <div class="container">
+        <h1>Interactive Piano: Octave</h1>
+        <div class="instructions"><strong>Octave:</strong> The interval between one pitch and another with double or half its frequency; notes an octave apart share the same letter name<br><br>Click on the piano keys to play notes and explore the keyboard.</div>
+        
+        <canvas id="pianoCanvas" width="800" height="250"></canvas>
         <div class="controls">
-            <button onclick="playMajorScale()">Play C Major Scale</button>
-            <button onclick="playMinorScale()">Play C Minor Scale</button>
-            <button onclick="playChord()">Play C Major Chord</button>
-            <button onclick="resetKeyboard()">Reset</button>
+            <button id="showLabels">Toggle Note Labels</button>
+            <button id="highlightPattern">Highlight C Major Scale</button>
         </div>
+    
     </div>
-
     <script>
-        const whiteNotes = ['C', 'D', 'E', 'F', 'G', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'A', 'B'];
-        const blackNotePositions = [1, 2, 4, 5, 6, 8, 9, 11, 12, 13];
-        const blackNotes = ['C#', 'D#', 'F#', 'G#', 'A#', 'C#', 'D#', 'F#', 'G#', 'A#'];
-        const keyboard = document.getElementById('keyboard');
-        const display = document.getElementById('display');
-        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        
+        const canvas = document.getElementById('pianoCanvas');
+        const ctx = canvas.getContext('2d');
+        const showLabelsBtn = document.getElementById('showLabels');
+        const highlightBtn = document.getElementById('highlightPattern');
 
-        function playNote(frequency, duration) {
+        let audioContext = null;
+        let showLabels = true;
+        let highlightKeys = [];
+
+        const whiteKeys = ['C', 'D', 'E', 'F', 'G', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'A', 'B'];
+        const blackKeys = [1, 2, null, 4, 5, 6, null, 1, 2, null, 4, 5, 6];
+        const whiteKeyWidth = canvas.width / 14;
+        const whiteKeyHeight = 200;
+        const blackKeyWidth = whiteKeyWidth * 0.6;
+        const blackKeyHeight = 120;
+
+        const frequencies = [261.63, 277.18, 293.66, 311.13, 329.63, 349.23, 369.99, 392.00, 415.30, 440.00, 466.16, 493.88, 523.25, 554.37];
+
+        function drawPiano() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            for (let i = 0; i < 14; i++) {
+                const x = i * whiteKeyWidth;
+                const isHighlighted = highlightKeys.includes(i);
+
+                ctx.fillStyle = isHighlighted ? '#e0e7ff' : 'white';
+                ctx.fillRect(x, 0, whiteKeyWidth, whiteKeyHeight);
+                ctx.strokeStyle = '#333';
+                ctx.lineWidth = 2;
+                ctx.strokeRect(x, 0, whiteKeyWidth, whiteKeyHeight);
+
+                if (showLabels) {
+                    ctx.fillStyle = '#667eea';
+                    ctx.font = 'bold 14px sans-serif';
+                    ctx.textAlign = 'center';
+                    ctx.fillText(whiteKeys[i], x + whiteKeyWidth / 2, whiteKeyHeight - 10);
+                }
+            }
+
+            for (let i = 0; i < 13; i++) {
+                if (blackKeys[i] !== null) {
+                    const x = (i + 0.7) * whiteKeyWidth;
+                    ctx.fillStyle = '#333';
+                    ctx.fillRect(x, 0, blackKeyWidth, blackKeyHeight);
+                    ctx.strokeStyle = '#000';
+                    ctx.strokeRect(x, 0, blackKeyWidth, blackKeyHeight);
+                }
+            }
+        }
+
+        function playNote(freq) {
+            if (!audioContext) {
+                audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            }
+
             const oscillator = audioContext.createOscillator();
             const gainNode = audioContext.createGain();
+
+            oscillator.frequency.value = freq;
+            oscillator.type = 'sine';
+            gainNode.gain.value = 0.3;
+
             oscillator.connect(gainNode);
             gainNode.connect(audioContext.destination);
-            oscillator.frequency.value = frequency;
-            oscillator.type = 'sine';
-            gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
-            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + duration);
-            oscillator.start(audioContext.currentTime);
-            oscillator.stop(audioContext.currentTime + duration);
+
+            oscillator.start();
+            gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+            oscillator.stop(audioContext.currentTime + 0.5);
         }
 
-        function getNoteFrequency(note) {
-            const frequencies = {
-                'C': 261.63, 'C#': 277.18, 'D': 293.66, 'D#': 311.13,
-                'E': 329.63, 'F': 349.23, 'F#': 369.99, 'G': 392.00,
-                'G#': 415.30, 'A': 440.00, 'A#': 466.16, 'B': 493.88
-            };
-            return frequencies[note] || 440;
-        }
+        canvas.addEventListener('click', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
 
-        // Create white keys
-        whiteNotes.forEach((note, index) => {
-            const key = document.createElement('div');
-            key.className = 'white-key';
-            key.innerHTML = '<div class="key-label">' + note + '</div>';
-            key.onclick = function() {
-                playNote(getNoteFrequency(note), 0.5);
-                display.textContent = 'Note: ' + note;
-                key.classList.add('active');
-                setTimeout(function() { key.classList.remove('active'); }, 300);
-            };
-            keyboard.appendChild(key);
+            for (let i = 0; i < 13; i++) {
+                if (blackKeys[i] !== null) {
+                    const blackX = (i + 0.7) * whiteKeyWidth;
+                    if (x >= blackX && x <= blackX + blackKeyWidth && y <= blackKeyHeight) {
+                        const blackFreq = frequencies[i] * Math.pow(2, 1/12);
+                        playNote(blackFreq);
+                        return;
+                    }
+                }
+            }
+
+            const whiteKeyIndex = Math.floor(x / whiteKeyWidth);
+            if (whiteKeyIndex >= 0 && whiteKeyIndex < 14) {
+                playNote(frequencies[whiteKeyIndex]);
+            }
         });
 
-        // Create black keys
-        blackNotePositions.forEach((pos, index) => {
-            const key = document.createElement('div');
-            key.className = 'black-key';
-            key.style.left = (pos * 50 - 15) + 'px';
-            key.innerHTML = '<div class="key-label">' + blackNotes[index] + '</div>';
-            key.onclick = function(e) {
-                e.stopPropagation();
-                playNote(getNoteFrequency(blackNotes[index]), 0.5);
-                display.textContent = 'Note: ' + blackNotes[index];
-                key.classList.add('active');
-                setTimeout(function() { key.classList.remove('active'); }, 300);
-            };
-            keyboard.appendChild(key);
+        showLabelsBtn.addEventListener('click', () => {
+            showLabels = !showLabels;
+            drawPiano();
         });
 
-        function playMajorScale() {
-            const scale = ['C', 'D', 'E', 'F', 'G', 'A', 'B', 'C'];
-            scale.forEach((note, i) => {
-                setTimeout(function() {
-                    playNote(getNoteFrequency(note), 0.5);
-                    display.textContent = 'Playing C Major Scale: ' + note;
-                }, i * 500);
-            });
-        }
+        highlightBtn.addEventListener('click', () => {
+            highlightKeys = highlightKeys.length > 0 ? [] : [0, 2, 4, 5, 7, 9, 11, 12];
+            drawPiano();
+        });
 
-        function playMinorScale() {
-            const scale = ['C', 'D', 'D#', 'F', 'G', 'G#', 'A#', 'C'];
-            scale.forEach((note, i) => {
-                setTimeout(function() {
-                    playNote(getNoteFrequency(note), 0.5);
-                    display.textContent = 'Playing C Minor Scale: ' + note;
-                }, i * 500);
-            });
-        }
-
-        function playChord() {
-            const chord = ['C', 'E', 'G'];
-            display.textContent = 'Playing C Major Chord';
-            chord.forEach(note => {
-                playNote(getNoteFrequency(note), 1.5);
-            });
-        }
-
-        function resetKeyboard() {
-            document.querySelectorAll('.white-key, .black-key').forEach(key => {
-                key.classList.remove('active');
-            });
-            display.textContent = 'Click a key to play a note';
-        }
+        drawPiano();
+    
     </script>
 </body>
 </html>
