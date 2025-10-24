@@ -49,19 +49,38 @@
             color: #e74c3c;
             margin-top: 0;
         }
-        .channel-link {
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .btn {
             display: inline-block;
-            background-color: #e74c3c;
-            color: white;
             padding: 12px 24px;
             text-decoration: none;
             border-radius: 5px;
-            margin: 15px 0;
             font-weight: bold;
-            transition: background-color 0.3s;
+            transition: all 0.3s;
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
         }
-        .channel-link:hover {
+        .btn-primary {
+            background-color: #e74c3c;
+            color: white;
+        }
+        .btn-primary:hover {
             background-color: #c0392b;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            background-color: #3498db;
+            color: white;
+        }
+        .btn-secondary:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
         }
         .note {
             background-color: #fff3cd;
@@ -69,6 +88,17 @@
             padding: 15px;
             margin: 20px 0;
             border-radius: 4px;
+        }
+        .info-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .info-box h3 {
+            color: #2c3e50;
+            margin-top: 0;
         }
     </style>
 </head>
@@ -78,23 +108,42 @@
     <div class="instructor-info">
         <h2>Learn from Brad Harrison</h2>
         <p>Brad Harrison is a Toronto-based trumpet player, composer, and music educator with over 214K YouTube subscribers. His channel focuses on music theory, practice techniques, and other musical topics.</p>
-        <a href="https://www.youtube.com/@BradHarrison" target="_blank" class="channel-link">Visit Brad Harrison's YouTube Channel</a>
+        <p><strong>Topic:</strong> Tie</p>
     </div>
 
     <div class="note">
-        <strong>Video Lesson:</strong> Watch this video from Brad Harrison to deepen your understanding of <strong>Tie</strong>.
+        <strong>📺 Find Video Content:</strong> Use the buttons below to find Brad Harrison's videos on <strong>Tie</strong>.
+    </div>
+
+    <div class="action-buttons">
+        <a href="https://www.youtube.com/results?search_query=Brad+Harrison+ties+music+notation" target="_blank" class="btn btn-primary">
+            🔍 Search for Tie Videos
+        </a>
+        <a href="https://www.youtube.com/@BradHarrison/videos" target="_blank" class="btn btn-secondary">
+            📚 Browse All Videos
+        </a>
     </div>
 
     <div class="video-container">
-        <!-- Embedded YouTube Search Results for Brad Harrison + topic -->
+        <!-- Embed Brad Harrison's channel latest uploads -->
         <iframe
-            src="https://www.youtube.com/embed?listType=search&list=Brad+Harrison+ties+music+notation"
+            src="https://www.youtube.com/embed?listType=user_uploads&list=UC5EEcOixvGwVFVsHXWYehHg"
             allowfullscreen
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
         </iframe>
     </div>
 
-    <div style="background-color: white; padding: 20px; border-radius: 8px; margin-top: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+    <div class="info-box">
+        <h3>How to Find Relevant Videos</h3>
+        <ol>
+            <li>Click the "<strong>Search for Tie Videos</strong>" button above to find videos specifically about this topic</li>
+            <li>Browse through the embedded playlist of Brad Harrison's latest videos</li>
+            <li>Visit his <a href="https://www.youtube.com/@BradHarrison" target="_blank">full channel</a> to explore organized playlists</li>
+            <li>Look for videos with titles containing: "ties music notation"</li>
+        </ol>
+    </div>
+
+    <div class="info-box">
         <h3>After Watching</h3>
         <ul>
             <li>Take notes on key concepts explained in the video</li>
@@ -102,13 +151,12 @@
             <li>Re-watch sections that need clarification</li>
             <li>Explore more of Brad Harrison's videos on related topics</li>
             <li>Apply what you learned to your own musical practice</li>
+            <li>Return to the Lesson tab to review the written content</li>
         </ul>
     </div>
 
     <div style="background-color: #e3f2fd; padding: 15px; border-radius: 8px; margin-top: 20px;">
-        <p><em>Note: This embedded search shows videos from Brad Harrison's channel related to "ties music notation".
-        If the video player doesn't load automatically, you can visit <a href="https://www.youtube.com/@BradHarrison" target="_blank">Brad Harrison's YouTube channel</a>
-        and search for videos about "Tie".</em></p>
+        <p><em>💡 Tip: Brad Harrison has created hundreds of music theory videos. Use the search button above to find videos specifically about "Tie", or browse his channel to discover related content that will enhance your understanding.</em></p>
     </div>
 </body>
 </html>
