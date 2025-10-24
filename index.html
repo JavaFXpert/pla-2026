@@ -443,9 +443,9 @@
                     <h2>Welcome to Music Theory!</h2>
                     <p>
                         Explore 70 comprehensive music theory concepts, from fundamental building blocks
-                        to advanced harmonic analysis. Each concept includes a detailed lesson and a video
-                        from Brad Harrison's YouTube channel. Select a concept from the sidebar to begin your
-                        learning journey.
+                        to advanced harmonic analysis. Each concept includes a detailed lesson, a video
+                        from Brad Harrison's YouTube channel, and an interactive visualization to enhance
+                        your understanding. Select a concept from the sidebar to begin your learning journey.
                     </p>
                     <div class="stats-grid">
                         <div class="stat-card">
@@ -457,7 +457,7 @@
                             <div class="stat-label">Completed</div>
                         </div>
                         <div class="stat-card">
-                            <div class="stat-number" id="totalPages">140</div>
+                            <div class="stat-number" id="totalPages">210</div>
                             <div class="stat-label">Total Pages</div>
                         </div>
                     </div>
@@ -618,6 +618,9 @@
             html += `<button class="tab-button ${initialTab === 'video' ? 'active' : ''}" onclick="switchTab('${conceptId}', 'video')">
                         <span class="tab-icon">🎥</span> Video
                      </button>`;
+            html += `<button class="tab-button ${initialTab === 'visualization' ? 'active' : ''}" onclick="switchTab('${conceptId}', 'visualization')">
+                        <span class="tab-icon">🎨</span> Visualization
+                     </button>`;
             html += '</div>';
 
             // Lesson tab content
@@ -630,6 +633,13 @@
             // Video tab content
             html += `<div class="tab-content ${initialTab === 'video' ? 'active' : ''}" id="video-tab">
                         <iframe src="canvas_music_theory_course/wiki_content/${conceptId}-video.html"
+                                onload="this.style.height=(this.contentWindow.document.body.scrollHeight+20)+'px'">
+                        </iframe>
+                     </div>`;
+
+            // Visualization tab content
+            html += `<div class="tab-content ${initialTab === 'visualization' ? 'active' : ''}" id="visualization-tab">
+                        <iframe src="canvas_music_theory_course/wiki_content/${conceptId}-visualization.html"
                                 onload="this.style.height=(this.contentWindow.document.body.scrollHeight+20)+'px'">
                         </iframe>
                      </div>`;
